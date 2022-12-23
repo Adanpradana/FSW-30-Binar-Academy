@@ -329,3 +329,142 @@ main h1 {
   padding-bottom: 36.17px;
 }
 /* end sys-req section */
+
+/* top-scores section */
+#top-scores {
+  background: radial-gradient(
+      70.52% 37.27% at 24.21% 47.47%,
+      rgba(35, 15, 15, 0) 0%,
+      rgba(0, 0, 0, 0) 51.1%,
+      #080a0b 99.74%
+    ),
+    url("/assets/top-score-bg.png");
+  width: 100%;
+  /* height: 960.16px; */
+}
+#top-scores .wrapper {
+  padding: 159.59px 119px 147.69px;
+}
+#top-scores .content-left-wrapper {
+  width: 410.93px;
+}
+#top-scores .content-left-wrapper h1 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+#top-scores .content-left-wrapper p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 40px;
+}
+
+#top-scores .content-left-wrapper button {
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  border-radius: 4px;
+  border: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #1a1917;
+  width: 230.36px;
+  height: 60px;
+}
+#top-scores .content-right .card {
+  width: 452.59px;
+  /* height: 182.94px; */
+  margin-bottom: 30px;
+}
+#top-scores .content-right .card.jada-griffin {
+  right: 145px;
+}
+#top-scores .content-right .card.aaron-williams {
+  /* padding-right: calc(264.44px - 119.61px); */
+  right: 39px;
+}
+#top-scores .content-right .card .card-wrapper {
+  padding: 17px;
+  /* background-color: white; */
+}
+#top-scores .content-right .card .card-wrapper .avatar-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  background-color: #f3af34;
+  right: 7px;
+  bottom: 5px;
+}
+#top-scores .content-right .card.evan-lahti .card-wrapper .avatar-img {
+  background: url("/assets/evan-lahti.jpg");
+}
+#top-scores .content-right .card.jada-griffin .card-wrapper .avatar-img {
+  background: url("/assets/jada-griffin.jpg");
+}
+#top-scores .content-right .card.aaron-williams .card-wrapper .avatar-img {
+  background: url("/assets/aaron-williams.jpg");
+}
+#top-scores .content-right .card .card-wrapper .avatar-bg {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background-color: #f3af34;
+}
+#top-scores
+  .content-right
+  .content-right-wrapper
+  .card
+  .card-wrapper
+  .avatar-name
+  .name
+  .name-title {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffb548;
+}
+#top-scores
+  .content-right
+  .content-right-wrapper
+  .card
+  .card-wrapper
+  .avatar-name
+  .name {
+  padding-left: 22.27px;
+}
+
+#top-scores .content-right .bottom {
+  padding-top: 22.74px;
+}
+#top-scores .content-right .bottom .wrapper {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+}
+#top-scores .content-right .bottom .wrapper p {
+  padding-top: 8.51px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+/* end top-scores section */
