@@ -496,7 +496,13 @@ main h1 {
 }
 #newsletter .right .content .stay-in-touch {
   width: 261.56px;
-  background-color: #f3af34;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffffff;
 }
 #newsletter .right .content .stay-in-touch h3 {
   font-family: "Arial";
@@ -509,8 +515,16 @@ main h1 {
 }
 #newsletter .right .content .title {
   /* width: 677px; */
-  background-color: #f3af34;
+  /* background-color: #f3af34; */
   padding-top: 20px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 75px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: #ffffff;
 }
 #newsletter .right .content .title h1 {
   font-family: "Arial";
@@ -524,8 +538,16 @@ main h1 {
 }
 #newsletter .right .content .content-text {
   /* width: 645px; */
-  background-color: green;
+  /* background-color: green; */
   padding-top: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  /* or 122% */
+
+  color: #ffffff;
 }
 #newsletter .right .content .content-text p {
   font-family: "Open Sans";
@@ -543,13 +565,59 @@ main h1 {
   /* padding-top: 40px; */
   width: 366.92px;
   border-radius: 5px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 5px;
+  position: relative;
+  flex: 1;
 }
-#newsletter .right .content .subscribe .btn {
-  /* padding-top: 40px; */
-  width: 260px;
+#newsletter .right .content .subscribe .email-input label {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  padding-left: 17.22px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border-radius: 4px;
+  position: absolute;
+  top: 6.14px;
+  left: 5px;
+}
+#newsletter .right .content .subscribe .email-input input[type="email"] {
+  background: rgba(255, 255, 255, 0.08);
+  padding-top: 27px;
+  padding-bottom: 6px;
+  padding-left: 21px;
   border-radius: 5px;
+  color: #ffb548;
+}
+#newsletter
+  .right
+  .content
+  .subscribe
+  .email-input
+  input[type="email"]::placeholder {
+  position: relative;
+  color: #ffb548;
+}
+#newsletter .right .content .subscribe .subs {
+  /* padding-top: 40px; */
+  width: 266px;
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  border-radius: 4px;
+  border: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  height: 100%;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: capitalize;
+
+  color: #1a1917;
 }
 #newsletter .right .content .subscribe .btn-wrapper {
   padding-left: 17.22px;
