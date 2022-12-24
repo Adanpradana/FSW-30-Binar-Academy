@@ -468,3 +468,94 @@ main h1 {
   opacity: 0.5;
 }
 /* end top-scores section */
+
+/* newsletter section */
+#newsletter {
+  background: radial-gradient(
+      78.66% 177.87% at 19.56% 37.57%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 19.22%,
+      #080a0b 99.74%
+    ),
+    url("/assets/newsletter.png");
+  width: 100%;
+  background-size: cover;
+}
+#newsletter .wrapper {
+  padding: 50px 128.29px;
+}
+
+#newsletter .image {
+  padding-left: 31px;
+}
+#newsletter .right .content {
+  padding-top: 86px;
+}
+#newsletter .right-wrapper {
+  padding-left: 67.45px;
+}
+#newsletter .right .content .stay-in-touch {
+  width: 261.56px;
+  background-color: #f3af34;
+}
+#newsletter .right .content .stay-in-touch h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+#newsletter .right .content .title {
+  /* width: 677px; */
+  background-color: #f3af34;
+  padding-top: 20px;
+}
+#newsletter .right .content .title h1 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 75px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+}
+#newsletter .right .content .content-text {
+  /* width: 645px; */
+  background-color: green;
+  padding-top: 20px;
+}
+#newsletter .right .content .content-text p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+#newsletter .right .content .subscribe {
+  padding-top: 40px;
+  /* width: 100%; */
+  margin: 0;
+}
+#newsletter .right .content .subscribe .email-input {
+  /* padding-top: 40px; */
+  width: 366.92px;
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 5px;
+}
+#newsletter .right .content .subscribe .btn {
+  /* padding-top: 40px; */
+  width: 260px;
+  border-radius: 5px;
+}
+#newsletter .right .content .subscribe .btn-wrapper {
+  padding-left: 17.22px;
+}
+/* end newsletter section */
+
+footer .wrapper {
+  padding-top: 60px;
+}
