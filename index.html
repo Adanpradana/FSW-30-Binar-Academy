@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="responsive.css" />
     <link
       rel="stylesheet"
       href="node_modules/bootstrap/dist/css/bootstrap.min.css"
@@ -16,7 +17,7 @@
       <nav
         class="d-flex align-items-center fixed-top text-white justify-content-between"
       >
-        <div class="d-flex align-items-center">
+        <div class="d-flex align-items-center wrapper">
           <h1 class="logo">logo</h1>
           <div class="navigation d-flex navbar navbar-expand nav-menu">
             <ul
@@ -369,36 +370,40 @@
               </div>
             </div>
           </div>
-          <footer class="text-white bg-secondary">
+          <footer class="text-white">
             <div class="wrapper p-0">
               <div
                 class="footer navbar navbar-expand nav-menu justify-content-end"
               >
-                <ul
-                  class="footer-section d-flex gap-5 align-items-center justify-content-center navbar-nav"
-                >
-                  <li class="nav-link">main</li>
-                  <li class="nav-link">about</li>
-                  <li class="nav-link">game features</li>
-                  <li class="nav-link">system-requirements</li>
-                  <li class="nav-link">quotes</li>
-                </ul>
-                <ul
-                  class="social-media d-flex gap-5 align-items-center justify-content-center navbar-nav"
-                >
-                  <li class="nav-link">
-                    <img src="/assets/facebook.svg" alt="" />
-                  </li>
-                  <li class="nav-link">
-                    <img src="/assets/twitter.svg" alt="" />
-                  </li>
-                  <li class="nav-link">
-                    <img src="/assets/vector.svg" alt="" />
-                  </li>
-                  <li class="nav-link">
-                    <img src="/assets/twitch.svg" alt="" />
-                  </li>
-                </ul>
+                <div class="footer-section">
+                  <ul
+                    class="d-flex align-items-center justify-content-center navbar-nav"
+                  >
+                    <li class="nav-link">main</li>
+                    <li class="nav-link">about</li>
+                    <li class="nav-link">game features</li>
+                    <li class="nav-link">system-requirements</li>
+                    <li class="nav-link">quotes</li>
+                  </ul>
+                </div>
+                <div class="social-media">
+                  <ul
+                    class="d-flex align-items-center justify-content-center navbar-nav"
+                  >
+                    <li class="nav-link">
+                      <img src="/assets/facebook.svg" alt="" />
+                    </li>
+                    <li class="nav-link">
+                      <img src="/assets/twitter.svg" alt="" />
+                    </li>
+                    <li class="nav-link">
+                      <img src="/assets/vector.svg" alt="" />
+                    </li>
+                    <li class="nav-link">
+                      <img src="/assets/twitch.svg" alt="" />
+                    </li>
+                  </ul>
+                </div>
               </div>
               <div class="line-break">
                 <div class="wrapper p-0">
@@ -406,11 +411,16 @@
                 </div>
               </div>
               <div class="author">
-                <div
-                  class="wrapper d-flex justify-content-between bg-danger p-0"
-                >
-                  <div class="left">test</div>
-                  <div class="right">123</div>
+                <div class="wrapper d-flex justify-content-between p-0">
+                  <div class="left">
+                    <p>
+                      © 2018 Moh Rizka Haris Pradana @Adanpradanaa, Inc. All
+                      Rights Reserved
+                    </p>
+                  </div>
+                  <div class="right">
+                    <p>Privacy Policy | Terms of Services | Code of Conduct</p>
+                  </div>
                 </div>
               </div>
             </div>

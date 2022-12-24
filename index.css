@@ -563,7 +563,7 @@ main h1 {
 }
 #newsletter .right .content .subscribe .email-input {
   /* padding-top: 40px; */
-  width: 366.92px;
+  /* width: 50px; */
   border-radius: 5px;
   position: relative;
   flex: 1;
@@ -602,7 +602,7 @@ main h1 {
 }
 #newsletter .right .content .subscribe .subs {
   /* padding-top: 40px; */
-  width: 266px;
+  width: 230px;
   background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
   border-radius: 4px;
   border: none;
@@ -624,6 +624,45 @@ main h1 {
 }
 /* end newsletter section */
 
+/* footer section */
+
 footer .wrapper {
   padding-top: 60px;
 }
+footer .footer-section {
+  padding-right: 35px;
+}
+footer .footer .footer-section ul .nav-link {
+  padding-right: 32px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  text-align: right;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+}
+footer .footer .social-media ul .nav-link {
+  padding-left: 40px;
+}
+footer hr {
+  opacity: 0.5;
+  border: 0.873968px solid #ffffff;
+}
+footer .author {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+footer .author .right {
+  text-transform: uppercase;
+}
+/* end footer section */
