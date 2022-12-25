@@ -139,6 +139,9 @@ main h1 {
   height: 200px; */
 }
 
+#the-games .text {
+  width: 360px;
+}
 #the-games h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -146,6 +149,7 @@ main h1 {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 2px;
+  margin: 0;
 }
 #the-games h1 {
   font-family: Arial, Helvetica, sans-serif;
@@ -155,28 +159,61 @@ main h1 {
   line-height: 64px;
   letter-spacing: 3px;
   text-transform: uppercase;
-  padding-top: 13.56px;
+  /* padding-top: 13.56px; */
+}
+#the-games .carousel-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 39px;
 }
 #the-games .carousel-wrapper .image img {
   width: 100%;
   height: auto;
 }
+#the-games .carousel-wrapper .image {
+  position: relative;
+}
+#the-games .carousel-wrapper .paginations {
+  display: flex;
+  gap: 35px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 10px;
+}
+#the-games .carousel-wrapper .paginations .dot {
+  width: 0.8em;
+  height: 0.8em;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+#the-games .carousel-wrapper .paginations .dot-full {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: white;
+  border-radius: 100%;
+}
 /* end the games section */
 
 /* games-section */
 #game-features {
-  background: url("/assets/features.jpg") no-repeat center center;
-  width: 100%;
-  height: 960.27px;
+  background: radial-gradient(
+      51.1% 80.48% at 30.85% 53.65%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 19.2%,
+      rgba(4, 5, 6, 0.520671) 47.48%,
+      #080a0b 99.74%
+    ),
+    url("/assets/features.jpg");
   background-size: cover;
+  height: 870.26px;
 }
-#game-features {
-  padding-left: 236px;
-  padding-right: 236px;
-  padding-top: 258px;
+
+#game-features .wrapper {
+  display: flex;
+  padding: 169px 233px 258px 793px;
 }
 #game-features .wrapper .content {
-  padding-left: 5em;
   color: white;
 }
 #game-features .wrapper .content h3 {
@@ -186,6 +223,8 @@ main h1 {
   font-size: 24px;
   line-height: 28px;
   letter-spacing: 2px;
+  width: 262px;
+  margin-bottom: 9;
 }
 #game-features .wrapper .content h1 {
   font-family: "Arial";
@@ -198,7 +237,7 @@ main h1 {
 }
 #game-features .progress-bar {
   text-align: left;
-  padding-top: 70.75px;
+  padding-top: 71px;
 }
 #game-features .progress-bar ul {
   list-style: none;
@@ -261,13 +300,16 @@ main h1 {
       #080a0b 99.74%
     ),
     url("/assets/requirements.png") no-repeat center center;
-  width: 100%;
   height: 961.13px;
   background-size: cover;
 }
-#sys-req .content-top {
+#sys-req .wrapper {
+  /* padding: 145px 520px 170px 121px; */
   padding-top: 145px;
+  padding-bottom: 170px;
+  padding-left: 121px;
 }
+
 #sys-req .content-top h3 {
   font-family: "Arial";
   font-style: normal;
@@ -275,14 +317,14 @@ main h1 {
   font-size: 10px;
   line-height: 16px;
   letter-spacing: 2px;
+  text-align: center;
 }
 #sys-req .content-bottom {
   padding-top: 54.29px;
-  padding-left: 131.55px;
+  width: 572px;
 }
 #sys-req .content-bottom .grid {
   padding-top: 87.73px;
-  width: 573.2px;
 }
 
 #sys-req .content-bottom .grid .text-wrapper {

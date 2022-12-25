@@ -1,3 +1,10 @@
+@media (max-width: 1080px) {
+  #the-games .wrapper {
+    /* padding: 254px 97px 282px 80px; */
+    display: flex;
+    flex-direction: column;
+  }
+}
 @media (max-width: 720px) {
   nav .wrapper {
     padding: 0 30px 0 30px;
@@ -21,14 +28,42 @@
     background-size: contain;
     padding-top: 100px;
   }
-}
-@media (max-width: 720px) {
-  nav {
-    /* background-color: red; */
+  /* the games */
+  #game-features .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    padding-top: 100px;
+    display: flex;
+  }
+  #game-features .left-content {
+    display: none;
+  }
+  #game-features .right-content {
+    width: 100%;
   }
 }
+
 @media (max-width: 640px) {
-  nav {
-    /* background-color: white; */
+  #the-games .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+  }
+  #the-games .carousel-wrapper .image img {
+    width: 100%;
+    height: auto;
+  }
+  #hero h1 {
+    font-size: 60px;
+  }
+  #sys-req .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    /* display: flex; */
+    align-items: center;
   }
 }
