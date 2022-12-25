@@ -1,19 +1,33 @@
-@media (min-width: 1080px) {
-  /* nav {
-    background-color: blue;
-    margin: 0 auto;
-  }
+@media (max-width: 720px) {
   nav .wrapper {
-    background-color: aquamarine;
-
-  } */
+    padding: 0 30px 0 30px;
+  }
+  nav .wrapper .navigation .menu {
+    position: absolute;
+    display: none;
+    background-color: black;
+    top: 25px;
+    right: -200px;
+  }
+  nav .wrapper .hamburger-menu {
+    display: block;
+  }
+  nav .wrapper .navigation {
+    position: relative;
+  }
+  #hero .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    padding-top: 100px;
+  }
 }
-@media (min-width: 720px) {
+@media (max-width: 720px) {
   nav {
     /* background-color: red; */
   }
 }
-@media (min-width: 640px) {
+@media (max-width: 640px) {
   nav {
     /* background-color: white; */
   }

@@ -3,41 +3,12 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
-
-.main-content {
-  width: 100%;
-  margin: 0 auto;
-}
-
 /* navbar */
 nav {
   background: rgba(0, 0, 0, 0.5);
   padding-top: 17px;
   padding-bottom: 17px;
 }
-nav .wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding-left: 107px;
-  padding-right: 162px;
-}
-nav .wrapper .navigation {
-  display: flex;
-  align-items: center;
-}
-nav .wrapper .hamburger-menu {
-  display: none;
-  cursor: pointer;
-}
-nav .wrapper .hamburger-menu .wrapper-line .line {
-  width: 35px;
-  height: 4px;
-  background-color: white;
-  margin: 6px 0;
-  border-radius: 20px;
-}
-
 main h1 {
   margin: 0;
   font-family: "Open Sans", sans-serif;
@@ -49,17 +20,29 @@ main h1 {
   text-transform: uppercase;
 }
 
+.logo {
+  padding-left: 107px;
+}
+
+.main-content .nav-menu {
+  padding-left: 104px;
+}
+.main-content .cta {
+  padding-right: 162px;
+}
 /* end navbar */
 
 /* hero section */
 #hero {
+  height: 60em;
+  width: 100%;
   background: radial-gradient(
       189.96% 61.18% at 50% 38.82%,
       rgba(255, 181, 72, 0) 0%,
       rgba(52, 44, 29, 0.80319) 73.22%,
       #08090a 99.74%
     ),
-    url("/assets/Group\ 1.png") no-repeat center center;
+    url("/assets/Group\ 1.png");
   background-size: cover;
 }
 #hero .wrapper {
@@ -113,6 +96,8 @@ main h1 {
 
 /* the games section */
 #the-games {
+  width: 100%;
+  height: 1051px;
   background: radial-gradient(
       136.03% 54.57% at 50% 48.04%,
       rgba(255, 255, 255, 0) 0%,
@@ -122,23 +107,40 @@ main h1 {
     url("/assets/the-games-bg.jpg");
   background-size: cover;
   color: white;
-  width: 100%;
+}
+#the-games {
+  padding-top: 292.4px;
+}
+#the-games .padding-left {
+  padding-left: 79.55px;
 }
 
 #the-games .text {
   top: -60px;
 }
-#the-games .wrapper {
-  padding: 254px 97px 282px 80px;
-  display: flex;
-}
 #the-games .image {
   padding-left: 11px;
   padding-right: 17px;
-  /* width: 400px;
-  height: 200px; */
 }
-
+#the-games .slider-wrapper {
+  gap: 52px;
+  bottom: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+#the-games .image .slider {
+  width: 14px;
+  height: 14px;
+  border-radius: 100px;
+  background-color: white;
+}
+#the-games .image .slider-border {
+  width: 14px;
+  height: 14px;
+  border-radius: 100px;
+  border: 2px solid white;
+}
 #the-games h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
@@ -157,9 +159,11 @@ main h1 {
   text-transform: uppercase;
   padding-top: 13.56px;
 }
-#the-games .carousel-wrapper .image img {
-  width: 100%;
-  height: auto;
+#the-games .carousel {
+  padding-right: 97.51px;
+}
+#the-games .wrapper {
+  top: 60px;
 }
 /* end the games section */
 
@@ -247,6 +251,8 @@ main h1 {
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
+  /* or 122% */
+
   text-align: justify;
   padding-top: 1em;
 }

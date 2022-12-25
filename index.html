@@ -14,42 +14,31 @@
   </head>
   <body>
     <main class="main-content">
-      <nav
-        class="d-flex align-items-center fixed-top text-white justify-content-between"
-      >
-        <div class="d-flex align-items-center wrapper">
-          <h1 class="logo">logo</h1>
-          <div class="navigation d-flex navbar navbar-expand nav-menu">
-            <ul
-              class="d-flex gap-5 align-items-center justify-content-center navbar-nav"
-            >
-              <li class="navbar-nav">
-                <a class="nav-link text-white" href="">home</a>
-              </li>
-              <li class="navbar-nav">
-                <a class="nav-link text-white" href="">work</a>
-              </li>
-              <li class="navbar-nav">
-                <a class="nav-link text-white" href="">contact</a>
-              </li>
-              <li class="navbar-nav">
-                <a class="nav-link text-white" href="">about me</a>
-              </li>
+      <nav class="fixed-top text-white">
+        <div class="wrapper">
+          <div class="logo">
+            <h1>logo</h1>
+          </div>
+          <div class="navigation">
+            <ul class="menu">
+              <li class="navbar-nav">home</li>
+              <li class="navbar-nav">work</li>
+              <li class="navbar-nav">contact</li>
+              <li class="navbar-nav">about me</li>
+              <li class="navbar-nav">sign up</li>
+              <li class="navbar-nav">login</li>
             </ul>
           </div>
-        </div>
-        <div class="cta d-flex justify-content-center cta">
-          <ul class="d-flex gap-4 justify-content-center m-0 p-0">
-            <li class="navbar-nav">
-              <a class="nav-link text-white" href="">sign up</a>
-            </li>
-            <li class="navbar-nav">
-              <a class="nav-link text-white" href="">login</a>
-            </li>
-          </ul>
+          <div class="hamburger-menu">
+            <div class="wrapper-line">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
         </div>
       </nav>
-      <section id="hero" class="flex-column m-auto text-center">
+      <section id="hero" class="text-center">
         <div class="wrapper">
           <div class="play">
             <h1>play traditional game</h1>
@@ -64,40 +53,35 @@
           </div>
         </div>
       </section>
-      <section id="the-games" class="">
-        <div class="wrapper d-flex">
-          <div class="padding-left w-100">
-            <div class="wrapper-content position-relative">
-              <div class="position-absolute text">
-                <h3>What's so special</h3>
-                <h1>the games</h1>
-              </div>
+      <section id="the-games">
+        <div class="wrapper bg-primary">
+          <div class="left-content bg-secondary">
+            <div class="text">
+              <h3>What's so special</h3>
+              <h1>the games</h1>
             </div>
           </div>
-          <div class="carousel d-flex">
-            <div class="wrapper d-flex align-items-center">
-              <div>
-                <img src="assets/switch-left.svg" alt="" />
+          <div class="carousel bg-success">
+            <div class="carousel-wrapper">
+              <div class="silder">
+                <img src="assets/switch-new-left.svg" alt="" />
               </div>
-              <div class="image position-relative">
-                <div class="slider-wrapper">
-                  <img
-                    src="/assets/rockpaperstrategy-1600 1123123123123.png"
-                    alt=""
-                  />
-                  <div
-                    class="slider-wrapper d-flex justify-content-center position-absolute"
-                  >
-                    <div class="slider"></div>
-                    <div class="slider-border"></div>
-                    <div class="slider-border"></div>
-                    <div class="slider-border"></div>
-                    <div class="slider-border"></div>
-                  </div>
+              <div class="image">
+                <img
+                  src="/assets/rockpaperstrategy-1600 1123123123123.png"
+                  alt=""
+                  class="responsive"
+                />
+                <div class="paginations">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
                 </div>
               </div>
-              <div>
-                <img src="assets/switch-right.svg" alt="" />
+              <div class="silder">
+                <img src="assets/switch-new-right.svg" alt="" />
               </div>
             </div>
           </div>
