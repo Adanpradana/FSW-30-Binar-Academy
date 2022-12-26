@@ -5,6 +5,24 @@
   #top-scores .content-right .card.aaron-williams {
     right: 0;
   }
+  #the-games .wrapper {
+    /* padding: 254px 97px 282px 80px; */
+    display: flex;
+    flex-direction: column;
+  }
+  #game-features .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: cover;
+    padding-top: 100px;
+    display: flex;
+  }
+  #game-features .left-content {
+    display: none;
+  }
+  #game-features .right-content {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1184px) {
@@ -54,21 +72,24 @@
     justify-content: center;
     /* text-align: center; */
   }
-  #top-scores .wrapper {
-    padding-top: 350px;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-size: contain;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    /* text-align: center; */
-  }
+
   #top-scores .content-left-wrapper {
     text-align: center;
   }
   #top-scores .content-right-wrapper {
     padding-top: 90px;
+  }
+  #sys-req .content-bottom {
+    width: 450px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    padding-top: 100px;
+    display: flex;
+  }
+  #newsletter .right .content .title h1 {
+    font-size: 48px;
+    line-height: normal;
   }
 }
 @media (max-width: 1080px) {
@@ -76,6 +97,12 @@
     /* padding: 254px 97px 282px 80px; */
     display: flex;
     flex-direction: column;
+  }
+}
+@media (max-width: 761px) {
+  #sys-req .content-bottom .grid .grid-wrapper .os {
+    border-right: none;
+    border-bottom: 1px solid white;
   }
 }
 @media (max-width: 720px) {
@@ -102,31 +129,33 @@
     padding-top: 100px;
   }
   /* the games */
-  #game-features .wrapper {
-    padding-left: 25px;
-    padding-right: 25px;
-    background-size: cover;
-    padding-top: 100px;
-    display: flex;
-  }
-  #game-features .left-content {
-    display: none;
-  }
-  #game-features .right-content {
-    width: 100%;
-  }
-  #sys-req .content-bottom {
-    width: 450px;
+  #sys-req .wrapper {
     padding-left: 25px;
     padding-right: 25px;
     background-size: contain;
-    padding-top: 100px;
-    display: flex;
+    align-items: center;
   }
-  #newsletter .right .content .title h1 {
-    font-size: 48px;
-    line-height: normal;
+
+  #sys-req .content-bottom {
+    width: 395px;
+    margin: 0 auto;
   }
+  /* #sys-req .content-bottom .grid .grid-wrapper .os {
+    border-bottom: 1px solid white;
+  }
+  #sys-req .content-bottom .grid .grid-wrapper .os {
+    border-bottom: 1px solid white;
+  } */
+}
+#sys-req .content-bottom .heading h1 {
+  font-size: 40px;
+  justify-content: center;
+  text-align: center;
+}
+#sys-req .content-bottom .heading {
+  text-align: center;
+  display: flex;
+  padding-top: 50px;
 }
 
 @media (max-width: 640px) {
@@ -144,28 +173,7 @@
   #hero h1 {
     font-size: 60px;
   }
-  #sys-req .wrapper {
-    padding-left: 25px;
-    padding-right: 25px;
-    background-size: contain;
-    align-items: center;
-  }
 
-  #sys-req .content-bottom {
-    width: 395px;
-    margin: 0 auto;
-  }
-
-  #sys-req .content-bottom .heading h1 {
-    font-size: 40px;
-    justify-content: center;
-    text-align: center;
-  }
-  #sys-req .content-bottom .heading {
-    text-align: center;
-    display: flex;
-    padding-top: 50px;
-  }
   #newsletter .right .content .subscribe .form-wrapper {
     flex-direction: column;
     justify-content: center;
@@ -175,5 +183,9 @@
   }
   #newsletter .right .content .subscribe .subs {
     height: 50px;
+  }
+  #newsletter .image img {
+    width: 75%;
+    height: auto;
   }
 }

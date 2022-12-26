@@ -326,7 +326,9 @@ main h1 {
 #sys-req .content-bottom .grid {
   padding-top: 87.73px;
 }
-
+#sys-req .content-bottom .grid .os {
+  border-bottom: none;
+}
 #sys-req .content-bottom .grid .text-wrapper {
   padding-left: 7px;
   padding-top: 15px;
@@ -349,6 +351,9 @@ main h1 {
   line-height: 64px;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+#sys-req .content-bottom .grid .grid-wrapper .os {
+  border-right: 1px solid white;
 }
 
 #sys-req .content-bottom .grid .text-wrapper .title {
