@@ -521,12 +521,21 @@ main h1 {
 }
 #newsletter .wrapper {
   padding: 50px 128.29px;
+}
+
+#newsletter .wrapper-content {
   display: flex;
   justify-content: space-between;
 }
-
 #newsletter .image {
   padding-left: 31px;
+  display: flex;
+  width: 100%;
+}
+
+#newsletter .image img {
+  width: 100%;
+  height: auto;
 }
 #newsletter .right .content {
   padding-top: 86px;
@@ -553,19 +562,7 @@ main h1 {
   letter-spacing: 2px;
   margin: 0;
 }
-#newsletter .right .content .title {
-  /* width: 677px; */
-  /* background-color: #f3af34; */
-  padding-top: 20px;
-  font-family: "Arial";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 65px;
-  line-height: 75px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: #ffffff;
-}
+
 #newsletter .right .content .title h1 {
   font-family: "Arial";
   font-style: normal;
@@ -575,18 +572,15 @@ main h1 {
   letter-spacing: 3px;
   text-transform: uppercase;
   margin: 0;
+  color: #ffffff;
 }
 #newsletter .right .content .content-text {
-  /* width: 645px; */
-  /* background-color: green; */
   padding-top: 20px;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 22px;
-  /* or 122% */
-
   color: #ffffff;
 }
 #newsletter .right .content .content-text p {
