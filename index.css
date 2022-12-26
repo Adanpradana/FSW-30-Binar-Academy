@@ -435,7 +435,6 @@ main h1 {
 }
 #top-scores .content-right .card .card-wrapper {
   padding: 17px;
-  /* background-color: white; */
 }
 #top-scores .content-right .card .card-wrapper .avatar-img {
   width: 65px;
@@ -489,14 +488,14 @@ main h1 {
 #top-scores .content-right .bottom {
   padding-top: 22.74px;
 }
-#top-scores .content-right .bottom .wrapper {
+#top-scores .content-right .bottom .bottom-wrapper {
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
   line-height: 25px;
 }
-#top-scores .content-right .bottom .wrapper p {
+#top-scores .content-right .bottom .bottom-wrapper p {
   padding-top: 8.51px;
   font-family: "Open Sans";
   font-style: normal;
