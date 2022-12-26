@@ -60,6 +60,25 @@
     width: 25%;
     height: auto;
   }
+  footer {
+    margin: 0 auto;
+  }
+  footer .footer-content-list {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-content-list .footer-section .section-item {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-left: 0;
+  }
+  footer .footer-content-list .social-media .bowl {
+    display: flex;
+    padding-left: 0;
+    gap: 50px;
+    justify-content: center;
+  }
 }
 @media (max-width: 1060px) {
   #top-scores .wrapper {
@@ -70,7 +89,6 @@
     align-items: center;
     flex-direction: column;
     justify-content: center;
-    /* text-align: center; */
   }
 
   #top-scores .content-left-wrapper {
@@ -79,13 +97,7 @@
   #top-scores .content-right-wrapper {
     padding-top: 90px;
   }
-  /* #sys-req .content-bottom {
-    width: 450px;
-    padding-left: 25px;
-    padding-right: 25px;
-    background-size: contain;
-    padding-top: 100px;
-  } */
+
   #newsletter .right .content .title h1 {
     font-size: 48px;
     line-height: normal;
@@ -93,9 +105,13 @@
 }
 @media (max-width: 1080px) {
   #the-games .wrapper {
-    /* padding: 254px 97px 282px 80px; */
     display: flex;
     flex-direction: column;
+  }
+  footer .footer.navbar {
+    flex-direction: column;
+    /* background-color: burlywood; */
+    padding-top: 20px;
   }
 }
 @media (max-width: 761px) {
@@ -118,6 +134,18 @@
   }
   #sys-req .content-bottom .grid {
     padding-top: 20.73px;
+  }
+
+  footer .footer .footer-section ul {
+    flex-direction: column;
+    padding-right: 0;
+  }
+  footer .footer .footer-section {
+    padding-right: 0;
+  }
+  footer .footer .social-media ul li.nav-link {
+    padding-left: 0;
+    padding-right: 0;
   }
 }
 @media (max-width: 720px) {
@@ -186,5 +214,18 @@
   #newsletter .image img {
     width: 75%;
     height: auto;
+  }
+}
+@media (max-width: 630px) {
+  footer .footer-content-list .footer-section .section-item {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-content .author .wrapper .left {
+    text-align: center;
   }
 }

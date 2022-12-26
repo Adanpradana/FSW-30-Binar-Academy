@@ -671,44 +671,22 @@ main h1 {
 /* end newsletter section */
 
 /* footer section */
+footer .footer-content-list {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+}
+footer ul li {
+  list-style: none;
+}
+footer .footer-content-list .footer-section .section-item {
+  display: flex;
+  gap: 40px;
+}
 
-footer .wrapper {
-  padding-top: 60px;
-}
-footer .footer-section {
-  padding-right: 35px;
-}
-footer .footer .footer-section ul .nav-link {
-  padding-right: 32px;
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 12px;
-  line-height: 16px;
-  text-align: right;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-
-  color: #ffffff;
-}
-footer .footer .social-media ul .nav-link {
-  padding-left: 40px;
-}
-footer hr {
-  opacity: 0.5;
-  border: 0.873968px solid #ffffff;
-}
-footer .author {
-  font-family: "Open Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 19px;
-  color: #ffffff;
-  mix-blend-mode: normal;
-  opacity: 0.5;
-}
-footer .author .right {
-  text-transform: uppercase;
+footer .footer-content-list .social-media .bowl {
+  display: flex;
+  padding-left: 86px;
+  gap: 50px;
 }
 /* end footer section */
