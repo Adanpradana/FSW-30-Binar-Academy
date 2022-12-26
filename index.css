@@ -380,6 +380,9 @@ main h1 {
 }
 #top-scores .wrapper {
   padding: 159.59px 119px 147.69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 #top-scores .content-left-wrapper {
   width: 410.93px;

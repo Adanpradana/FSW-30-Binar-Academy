@@ -32,7 +32,7 @@
   #game-features .wrapper {
     padding-left: 25px;
     padding-right: 25px;
-    background-size: contain;
+    background-size: cover;
     padding-top: 100px;
     display: flex;
   }
@@ -41,6 +41,14 @@
   }
   #game-features .right-content {
     width: 100%;
+  }
+  #sys-req .content-bottom {
+    width: 450px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    padding-top: 100px;
+    display: flex;
   }
 }
 
@@ -63,7 +71,28 @@
     padding-left: 25px;
     padding-right: 25px;
     background-size: contain;
-    /* display: flex; */
+    align-items: center;
+  }
+
+  #sys-req .content-bottom {
+    width: 395px;
+    margin: 0 auto;
+  }
+
+  #sys-req .content-bottom .heading h1 {
+    font-size: 40px;
+    justify-content: center;
+    text-align: center;
+  }
+  #sys-req .content-bottom .heading {
+    text-align: center;
+    display: flex;
+  }
+
+  #top-scores .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
     align-items: center;
   }
 }
