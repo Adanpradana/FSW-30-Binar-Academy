@@ -12,19 +12,37 @@
 /* navbar */
 nav {
   background: rgba(0, 0, 0, 0.5);
-  padding-top: 17px;
-  padding-bottom: 17px;
+  margin: 0 auto;
 }
 nav .wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   padding-left: 107px;
   padding-right: 162px;
 }
-nav .wrapper .navigation {
+
+nav .wrapper .navigation .menu {
   display: flex;
+  list-style: none;
   align-items: center;
+  margin: 0;
+  /* justify-content: space-between; */
+  gap: 30px;
+}
+nav .wrapper .navigation .menu .navbar-nav-login {
+  width: 75px;
+  /* margin-left: 1em; */
+}
+nav .wrapper .navigation .menu .navbar-nav-signup {
+  margin-left: 391px;
+  width: 75px;
+}
+nav .wrapper .navigation .menu .navbar-nav {
+  padding: 30px 0 30px 0;
+  display: flex;
+
+  width: 75px;
 }
 nav .wrapper .hamburger-menu {
   display: none;

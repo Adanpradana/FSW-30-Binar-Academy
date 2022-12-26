@@ -1,4 +1,8 @@
 @media (max-width: 1266px) {
+  /* nav .wrapper {
+    padding-left: 107px;
+    padding-right: 162px;
+  } */
   #top-scores .content-right .card.jada-griffin {
     right: 0;
   }
@@ -26,6 +30,10 @@
 }
 
 @media (max-width: 1184px) {
+  nav .wrapper {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
   #newsletter .wrapper {
     padding-top: 350px;
     padding-left: 25px;
@@ -80,6 +88,35 @@
     justify-content: center;
   }
 }
+@media (max-width: 1080px) {
+  nav .wrapper {
+    padding: 30px 25px 30px 25px;
+    justify-content: space-between;
+  }
+  nav .wrapper .navigation .menu {
+    position: absolute;
+    display: none;
+    background-color: black;
+    top: 25px;
+    right: -200px;
+  }
+  nav .wrapper .hamburger-menu {
+    display: block;
+  }
+  nav .wrapper .navigation {
+    position: relative;
+  }
+
+  #the-games .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer.navbar {
+    flex-direction: column;
+    /* background-color: burlywood; */
+    padding-top: 20px;
+  }
+}
 @media (max-width: 1060px) {
   #top-scores .wrapper {
     padding-top: 350px;
@@ -103,17 +140,7 @@
     line-height: normal;
   }
 }
-@media (max-width: 1080px) {
-  #the-games .wrapper {
-    display: flex;
-    flex-direction: column;
-  }
-  footer .footer.navbar {
-    flex-direction: column;
-    /* background-color: burlywood; */
-    padding-top: 20px;
-  }
-}
+
 @media (max-width: 761px) {
   #sys-req .content-bottom .grid .grid-wrapper .os {
     border-right: none;
@@ -149,22 +176,6 @@
   }
 }
 @media (max-width: 720px) {
-  nav .wrapper {
-    padding: 0 30px 0 30px;
-  }
-  nav .wrapper .navigation .menu {
-    position: absolute;
-    display: none;
-    background-color: black;
-    top: 25px;
-    right: -200px;
-  }
-  nav .wrapper .hamburger-menu {
-    display: block;
-  }
-  nav .wrapper .navigation {
-    position: relative;
-  }
   #hero .wrapper {
     padding-left: 25px;
     padding-right: 25px;
