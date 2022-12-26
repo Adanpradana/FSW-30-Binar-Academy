@@ -79,14 +79,13 @@
   #top-scores .content-right-wrapper {
     padding-top: 90px;
   }
-  #sys-req .content-bottom {
+  /* #sys-req .content-bottom {
     width: 450px;
     padding-left: 25px;
     padding-right: 25px;
     background-size: contain;
     padding-top: 100px;
-    display: flex;
-  }
+  } */
   #newsletter .right .content .title h1 {
     font-size: 48px;
     line-height: normal;
@@ -103,6 +102,22 @@
   #sys-req .content-bottom .grid .grid-wrapper .os {
     border-right: none;
     border-bottom: 1px solid white;
+  }
+  #sys-req .content-bottom .header h1 {
+    font-size: 40px;
+  }
+  #sys-req .content-bottom .header {
+    text-align: center;
+    /* padding-top: 20px; */
+  }
+  #sys-req .content-bottom {
+    /* width: 395px; */
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #sys-req .content-bottom .grid {
+    padding-top: 20.73px;
   }
 }
 @media (max-width: 720px) {
@@ -132,30 +147,14 @@
   #sys-req .wrapper {
     padding-left: 25px;
     padding-right: 25px;
-    background-size: contain;
-    align-items: center;
   }
-
   #sys-req .content-bottom {
-    width: 395px;
+    width: 100%;
     margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5.29px;
   }
-  /* #sys-req .content-bottom .grid .grid-wrapper .os {
-    border-bottom: 1px solid white;
-  }
-  #sys-req .content-bottom .grid .grid-wrapper .os {
-    border-bottom: 1px solid white;
-  } */
-}
-#sys-req .content-bottom .heading h1 {
-  font-size: 40px;
-  justify-content: center;
-  text-align: center;
-}
-#sys-req .content-bottom .heading {
-  text-align: center;
-  display: flex;
-  padding-top: 50px;
 }
 
 @media (max-width: 640px) {

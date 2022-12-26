@@ -307,7 +307,6 @@ main h1 {
   /* padding: 145px 520px 170px 121px; */
   padding-top: 145px;
   padding-bottom: 170px;
-  padding-left: 121px;
 }
 
 #sys-req .content-top h3 {
@@ -321,8 +320,10 @@ main h1 {
 }
 #sys-req .content-bottom {
   padding-top: 54.29px;
-  width: 572px;
+  width: 640px;
+  padding-left: 121px;
 }
+
 #sys-req .content-bottom .grid {
   padding-top: 87.73px;
 }
@@ -343,7 +344,13 @@ main h1 {
   color: #ffb548;
   letter-spacing: 2px;
 }
-#sys-req .heading h1 {
+
+#sys-req .content-bottom .header {
+  text-align: left;
+  /* display: flex; */
+  padding-top: 50px;
+}
+#sys-req .content-bottom .header h1 {
   font-family: "Arial";
   font-style: normal;
   font-weight: 400;
