@@ -3,7 +3,9 @@
   font-family: Arial, Helvetica, sans-serif;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 .main-content {
   width: 100%;
   margin: 0 auto;
@@ -41,7 +43,6 @@ nav .wrapper .navigation .menu .navbar-nav-signup {
 nav .wrapper .navigation .menu .navbar-nav {
   padding: 30px 0 30px 0;
   display: flex;
-
   width: 75px;
 }
 nav .wrapper .hamburger-menu {
@@ -700,6 +701,9 @@ footer ul li {
 footer .footer-content-list .footer-section .section-item {
   display: flex;
   gap: 40px;
+}
+footer .footer-content-list .footer-section .section-item .list-item {
+  cursor: pointer;
 }
 
 footer .footer-content-list .social-media .bowl {

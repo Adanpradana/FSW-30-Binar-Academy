@@ -341,11 +341,17 @@
               <div class="footer-content-list">
                 <div class="footer-section">
                   <ul class="section-item">
-                    <li class="list-item">main</li>
-                    <li class="list-item">about</li>
-                    <li class="list-item">game features</li>
-                    <li class="list-item">system-requirements</li>
-                    <li class="list-item">quotes</li>
+                    <li class="list-item home" onclick="target('main')">
+                      main
+                    </li>
+                    <li class="list-item" onclick="target('about')">about</li>
+                    <li class="list-item" onclick="target('games')">
+                      game features
+                    </li>
+                    <li class="list-item" onclick="target('sysReq')">
+                      system-requirements
+                    </li>
+                    <li class="list-item" onclick="target('quotes')">quotes</li>
                   </ul>
                 </div>
                 <div class="social-media">
@@ -388,6 +394,7 @@
         </div>
       </section>
     </main>
+    <script src="index.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
   </body>
 </html>
