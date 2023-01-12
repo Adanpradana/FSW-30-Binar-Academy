@@ -1,4 +1,7 @@
-const target = (props) => {
+const elementTarget = document.querySelector("nav .wrapper .navigation .menu");
+const button = document.querySelector("nav wrapper hamburger-menu");
+
+function target(props) {
   if (props === "main") {
     location.href = "#hero";
   } else if (props === "games") {
@@ -9,5 +12,12 @@ const target = (props) => {
     location.href === "#top-scores";
   } else if (props === "about") {
     location.href = "#newsletter";
+  } else if (props === "rockPaperScissor") {
+    location.href = "/games";
   }
-};
+}
+
+// const hamburger = () => {
+//   elementTarget.classList.toggle("nav wrapper navigation menu hidden");
+//   console.log(elementTarget);
+// };

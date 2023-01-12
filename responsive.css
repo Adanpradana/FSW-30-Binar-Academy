@@ -95,11 +95,12 @@
   }
   nav .wrapper .navigation .menu {
     position: absolute;
-    display: none;
+    display: block;
     background-color: red;
     top: 25px;
     right: -200px;
   }
+
   nav .wrapper .hamburger-menu {
     display: block;
   }
