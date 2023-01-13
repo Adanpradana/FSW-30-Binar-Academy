@@ -37,6 +37,10 @@
     width: 220px;
     height: 204px;
   }
+  .refresh img {
+    width: 53px;
+    height: 51px;
+  }
   .bottom img.scissor {
     width: 134px;
     height: 160px;
@@ -52,7 +56,7 @@
   .back {
     display: block;
   }
-  .wrapper-2 p {
+  .wrapper-2 #versus {
     font-family: "Open Sans";
     font-style: normal;
     font-weight: 700;
