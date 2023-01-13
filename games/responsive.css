@@ -53,6 +53,12 @@
     width: 115px;
     height: 150px;
   }
+  .bottom .img-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    /* width: 100%; */
+  }
   .back {
     display: block;
   }

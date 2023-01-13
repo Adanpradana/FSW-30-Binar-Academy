@@ -11,7 +11,7 @@ html {
 
 .container {
   width: 100%;
-
+  height: 100vh;
   padding: 1.5em;
   background-color: #9c835f;
   margin: 0 auto;
@@ -90,9 +90,15 @@ html {
 }
 .wrapper-2 {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  transform: rotate(-6.98deg);
 }
 .refresh {
   text-align: center;
+  cursor: pointer;
 }
 .refresh img {
   width: 33px;
@@ -113,4 +119,18 @@ html {
   width: 70px;
   height: 70px;
   padding: 0.4em;
+}
+
+/* doing JS */
+.active {
+  padding: 10px;
+  background-color: #4c9654;
+  width: 50%;
+  color: white;
+}
+
+#botScissor,
+#botRock,
+#botPaper {
+  border-radius: 10px;
 }
