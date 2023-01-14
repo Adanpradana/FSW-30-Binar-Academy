@@ -25,6 +25,12 @@ function result(playerPick, botPick) {
     return botPick === "rock" ? "PLAYER 1 WIN !" : "COM WIN";
 }
 
+function validation(botResult) {
+  if (botResult === "scissor") botScissor.style.backgroundColor = "#C4C4C4";
+  if (botResult === "paper") botPaper.style.backgroundColor = "#C4C4C4";
+  if (botResult === "rock") botRock.style.backgroundColor = "#C4C4C4";
+}
+
 function startGame(pick) {
   if (pick === "scissor") {
     if (!isPlay) return;
@@ -44,9 +50,7 @@ function startGame(pick) {
       winEl.classList.add("active");
       winEl.style.backgroundColor = "#4C9654";
     }
-    if (botResult === "scissor") botScissor.style.backgroundColor = "#C4C4C4";
-    if (botResult === "paper") botPaper.style.backgroundColor = "#C4C4C4";
-    if (botResult === "rock") botRock.style.backgroundColor = "#C4C4C4";
+    validation(botResult);
   } else if (pick === "paper") {
     if (!isPlay) return;
     const yourPick = pick;
@@ -65,9 +69,7 @@ function startGame(pick) {
       winEl.classList.add("active");
       winEl.style.backgroundColor = "#4C9654";
     }
-    if (botResult === "scissor") botScissor.style.backgroundColor = "#C4C4C4";
-    if (botResult === "paper") botPaper.style.backgroundColor = "#C4C4C4";
-    if (botResult === "rock") botRock.style.backgroundColor = "#C4C4C4";
+    validation(botResult);
   } else if (pick === "rock") {
     if (!isPlay) return;
     const yourPick = pick;
@@ -86,9 +88,7 @@ function startGame(pick) {
       winEl.classList.add("active");
       winEl.style.backgroundColor = "#4C9654";
     }
-    if (botResult === "scissor") botScissor.style.backgroundColor = "#C4C4C4";
-    if (botResult === "paper") botPaper.style.backgroundColor = "#C4C4C4";
-    if (botResult === "rock") botRock.style.backgroundColor = "#C4C4C4";
+    validation(botResult);
   }
   isPlay = false;
 }
