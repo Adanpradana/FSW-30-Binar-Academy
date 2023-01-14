@@ -31,23 +31,26 @@ function validation(botResult) {
   if (botResult === "rock") botRock.style.backgroundColor = "#C4C4C4";
 }
 
+function changeEl(winner) {
+  if (!isPlay) return;
+  const p = document.createElement("p");
+  versus.remove();
+  winEl.classList.add("active");
+  winEl.appendChild(p);
+  p.textContent = `${winner}`;
+}
+
 function startGame(pick) {
   if (pick === "scissor") {
-    if (!isPlay) return;
-    const yourPick = pick;
     const botResult = botPick();
-    const winner = result(yourPick, botResult);
-    const p = document.createElement("p");
-    versus.remove();
+    const winner = result(pick, botResult);
+    changeEl(winner);
     pickScissor.style.backgroundColor = "#C4C4C4";
-    winEl.classList.add("active");
-    winEl.appendChild(p);
-    p.textContent = `${winner}`;
     if (winner === "DRAW") {
       winEl.classList.add("active");
       winEl.style.backgroundColor = "#035B0C";
     } else {
-      winEl.classList.add("active");
+      winEl.classList.add("active
       winEl.style.backgroundColor = "#4C9654";
     }
     validation(botResult);
@@ -58,10 +61,10 @@ function startGame(pick) {
     const winner = result(yourPick, botResult);
     const p = document.createElement("p");
     versus.remove();
-    pickPaper.style.backgroundColor = "#C4C4C4";
     winEl.classList.add("active");
     winEl.appendChild(p);
     p.textContent = `${winner}`;
+    pickPaper.style.backgroundColor = "#C4C4C4";
     if (winner === "DRAW") {
       winEl.classList.add("active");
       winEl.style.backgroundColor = "#035B0C";
@@ -77,10 +80,10 @@ function startGame(pick) {
     const winner = result(yourPick, botResult);
     const p = document.createElement("p");
     versus.remove();
-    pickRock.style.backgroundColor = "#C4C4C4";
     winEl.classList.add("active");
     winEl.appendChild(p);
     p.textContent = `${winner}`;
+    pickRock.style.backgroundColor = "#C4C4C4";
     if (winner === "DRAW") {
       winEl.classList.add("active");
       winEl.style.backgroundColor = "#035B0C";
