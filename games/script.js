@@ -50,7 +50,7 @@ function startGame(pick) {
       winEl.classList.add("active");
       winEl.style.backgroundColor = "#035B0C";
     } else {
-      winEl.classList.add("active
+      winEl.classList.add("active");
       winEl.style.backgroundColor = "#4C9654";
     }
     validation(botResult);
