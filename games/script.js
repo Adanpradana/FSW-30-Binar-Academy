@@ -1,9 +1,7 @@
-//player pick
 const pickScissor = document.getElementById("p-scissor");
 const pickPaper = document.getElementById("p-paper");
 const pickRock = document.getElementById("p-rock");
 
-//bot result
 const botScissor = document.getElementById("botScissor");
 const botPaper = document.getElementById("botPaper");
 const botRock = document.getElementById("botRock");
@@ -55,15 +53,9 @@ function startGame(pick) {
     }
     validation(botResult);
   } else if (pick === "paper") {
-    if (!isPlay) return;
-    const yourPick = pick;
     const botResult = botPick();
-    const winner = result(yourPick, botResult);
-    const p = document.createElement("p");
-    versus.remove();
-    winEl.classList.add("active");
-    winEl.appendChild(p);
-    p.textContent = `${winner}`;
+    const winner = result(pick, botResult);
+    changeEl(winner);
     pickPaper.style.backgroundColor = "#C4C4C4";
     if (winner === "DRAW") {
       winEl.classList.add("active");
@@ -74,15 +66,9 @@ function startGame(pick) {
     }
     validation(botResult);
   } else if (pick === "rock") {
-    if (!isPlay) return;
-    const yourPick = pick;
     const botResult = botPick();
-    const winner = result(yourPick, botResult);
-    const p = document.createElement("p");
-    versus.remove();
-    winEl.classList.add("active");
-    winEl.appendChild(p);
-    p.textContent = `${winner}`;
+    const winner = result(pick, botResult);
+    changeEl(winner);
     pickRock.style.backgroundColor = "#C4C4C4";
     if (winner === "DRAW") {
       winEl.classList.add("active");
