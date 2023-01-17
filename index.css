@@ -83,6 +83,7 @@ main h1 {
     ),
     url("/assets/Group\ 1.png") no-repeat center center;
   background-size: cover;
+  width: 100%;
 }
 #hero .wrapper {
   padding-top: 313px;
@@ -92,7 +93,7 @@ main h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 700;
-  font-size: 72px;
+  font-size: 60px;
   line-height: 83px;
   text-align: center;
   letter-spacing: 3px;
@@ -310,6 +311,7 @@ main h1 {
   line-height: 22px;
   text-align: justify;
   padding-top: 1em;
+  width: 100%;
 }
 /* end game-features section */
 
