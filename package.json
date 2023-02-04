@@ -1,16 +1,31 @@
 {
   "dependencies": {
-    "bootstrap": "^5.2.3"
+    "body-parser": "^1.20.1",
+    "bootstrap": "^5.2.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2"
   },
   "name": "html",
   "version": "1.0.0",
-  "main": "index.js",
-  "devDependencies": {},
+  "main": "server.js",
   "scripts": {
+    "start": "nodemon server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "description": ""
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adanpradana/FSW-30-Binar-Academy.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adanpradana/FSW-30-Binar-Academy/issues"
+  },
+  "homepage": "https://github.com/Adanpradana/FSW-30-Binar-Academy#readme",
+  "description": "",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
