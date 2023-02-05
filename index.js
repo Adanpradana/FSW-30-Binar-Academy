@@ -1,6 +1,6 @@
-const elementTarget = document.querySelector("nav .wrapper .navigation .menu");
+const elementTarget = document.getElementById("navbar");
 const button = document.querySelector("nav wrapper hamburger-menu");
-
+let isClose = true;
 function target(props) {
   if (props === "main") {
     location.href = "#hero";
@@ -17,7 +17,9 @@ function target(props) {
   }
 }
 
-// const hamburger = () => {
-//   elementTarget.classList.toggle("nav wrapper navigation menu hidden");
-//   console.log(elementTarget);
-// };
+const hamburger = () => {
+  isClose
+    ? (elementTarget.style.display = "none")
+    : (elementTarget.style.display = "block");
+  isClose = !isClose;
+};
