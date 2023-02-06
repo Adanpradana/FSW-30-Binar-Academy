@@ -32,9 +32,7 @@ nav .wrapper .navigation .menu {
   /* justify-content: space-between; */
   gap: 30px;
 }
-nav .wrapper .navigation .menu .hidden {
-  display: none;
-}
+
 nav .wrapper .navigation .menu .navbar-nav-login {
   width: 75px;
   /* margin-left: 1em; */

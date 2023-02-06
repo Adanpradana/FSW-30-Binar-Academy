@@ -90,9 +90,16 @@
     padding: 30px 25px 30px 25px;
     justify-content: space-between;
   }
-  nav .wrapper .navigation .menu {
-    position: absolute;
+  #navbar {
     display: none;
+    position: absolute;
+    background-color: red;
+    top: 25px;
+    right: -200px;
+  }
+  #navbar.active {
+    display: block;
+    position: absolute;
     background-color: red;
     top: 25px;
     right: -200px;
@@ -246,12 +253,7 @@
   footer .footer-content .author .wrapper .left {
     text-align: center;
   }
-  nav .wrapper .navigation .menu {
-    position: absolute;
-    display: none;
-    background-color: red;
-    top: 25px;
-  }
+
   nav .wrapper .navigation {
     width: 100%;
   }
