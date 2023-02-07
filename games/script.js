@@ -9,7 +9,6 @@ const versus = document.getElementById("versus");
 const winEl = document.getElementById("winEl");
 
 let isPlay = true;
-
 const options = ["paper", "rock", "scissor"];
 const botPick = () => options[~~(Math.random() * options.length)];
 
@@ -30,7 +29,7 @@ function validation(botResult) {
 }
 
 function changeEl(winner) {
-  if (!isPlay) return;
+  isPlay = false;
   const p = document.createElement("p");
   versus.remove();
   winEl.classList.add("active");
@@ -40,6 +39,7 @@ function changeEl(winner) {
 
 function startGame(pick) {
   if (pick === "scissor") {
+    if (!isPlay) return;
     const botResult = botPick();
     const winner = result(pick, botResult);
     changeEl(winner);
@@ -53,6 +53,7 @@ function startGame(pick) {
     }
     validation(botResult);
   } else if (pick === "paper") {
+    if (!isPlay) return;
     const botResult = botPick();
     const winner = result(pick, botResult);
     changeEl(winner);
@@ -66,6 +67,7 @@ function startGame(pick) {
     }
     validation(botResult);
   } else if (pick === "rock") {
+    if (!isPlay) return;
     const botResult = botPick();
     const winner = result(pick, botResult);
     changeEl(winner);
@@ -79,5 +81,4 @@ function startGame(pick) {
     }
     validation(botResult);
   }
-  isPlay = false;
 }
