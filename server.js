@@ -1,26 +1,18 @@
 const port = 8000;
 const express = require("express");
 const app = express();
-const router = express.Router();
-const cors = require("cors");
+const bodyParser = require("body-parser");
 const path = require("path");
+const users = require("./controller/users");
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.static(path.join(__dirname, "/")));
+app.use(bodyParser.json());
 
-router.get("/", (req, res) => {
-  try {
-    res.sendFile("/");
-  } catch (error) {
-    console.log(error.message);
-  }
-});
+app.get("/", users.main);
+app.get("/games", users.games);
+app.get("/users", users.findAll);
+app.post("/users", users.createUsers);
+app.post("/auth/login", users.findOne);
 
-router.get("/games", (req, res) => {
-  try {
-    res.sendFile("/games/index.html");
-  } catch (error) {
-    console.log(error.message);
-  }
-});
 app.listen(port, () => console.log(`running in port ${port}`));

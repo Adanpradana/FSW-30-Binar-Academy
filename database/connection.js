@@ -19,3 +19,5 @@ const users = [
     password: "@12334",
   },
 ];
+
+module.exports = users;
