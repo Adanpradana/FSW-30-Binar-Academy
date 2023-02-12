@@ -1,0 +1,260 @@
+@media (max-width: 1266px) {
+  /* nav .wrapper {
+    padding-left: 107px;
+    padding-right: 162px;
+  } */
+  #top-scores .content-right .card.jada-griffin {
+    right: 0;
+  }
+  #top-scores .content-right .card.aaron-williams {
+    right: 0;
+  }
+  #the-games .wrapper {
+    /* padding: 254px 97px 282px 80px; */
+    display: flex;
+    flex-direction: column;
+  }
+  #game-features .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: cover;
+    padding-top: 100px;
+    display: flex;
+  }
+  #game-features .left-content {
+    display: none;
+  }
+}
+
+@media (max-width: 1184px) {
+  nav .wrapper {
+    padding-left: 160px;
+    padding-right: 160px;
+  }
+  #newsletter .wrapper {
+    padding-top: 350px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #newsletter .wrapper-content {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  #newsletter .right-wrapper {
+    padding: 0px 25px 0px 25px;
+    text-align: center;
+  }
+  #newsletter .right .content .stay-in-touch {
+    width: 100%;
+    padding-bottom: 50px;
+  }
+  #newsletter .image {
+    /* padding-left: 108px; */
+    display: flex;
+    width: full;
+    justify-content: center;
+  }
+  #newsletter .image img {
+    width: 25%;
+    height: auto;
+  }
+  footer {
+    margin: 0 auto;
+  }
+  footer .footer-content-list {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer-content-list .footer-section .section-item {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    padding-left: 0;
+  }
+  footer .footer-content-list .social-media .bowl {
+    display: flex;
+    padding-left: 0;
+    gap: 50px;
+    justify-content: center;
+  }
+}
+@media (max-width: 1080px) {
+  nav .wrapper {
+    padding: 30px 25px 30px 25px;
+    justify-content: space-between;
+  }
+  #navbar {
+    display: none;
+    position: absolute;
+    background-color: red;
+    top: 25px;
+    right: -200px;
+  }
+  #navbar.active {
+    display: block;
+    position: absolute;
+    background-color: red;
+    top: 25px;
+    right: -200px;
+  }
+
+  nav .wrapper .hamburger-menu {
+    display: block;
+  }
+  nav .wrapper .navigation {
+    position: relative;
+  }
+
+  #the-games .wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+  footer .footer.navbar {
+    flex-direction: column;
+    /* background-color: burlywood; */
+    padding-top: 20px;
+  }
+}
+@media (max-width: 1060px) {
+  #top-scores .wrapper {
+    padding-top: 350px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  #top-scores .content-left-wrapper {
+    text-align: center;
+  }
+  #top-scores .content-right-wrapper {
+    padding-top: 90px;
+  }
+
+  #newsletter .right .content .title h1 {
+    font-size: 48px;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 761px) {
+  #sys-req .content-bottom .grid .grid-wrapper .os {
+    border-right: none;
+    border-bottom: 1px solid white;
+  }
+  #sys-req .content-bottom .header h1 {
+    font-size: 40px;
+  }
+  #sys-req .content-bottom .header {
+    text-align: center;
+    /* padding-top: 20px; */
+  }
+  #sys-req .content-bottom {
+    /* width: 395px; */
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #sys-req .content-bottom .grid {
+    padding-top: 20.73px;
+  }
+
+  footer .footer .footer-section ul {
+    flex-direction: column;
+    padding-right: 0;
+  }
+  footer .footer .footer-section {
+    padding-right: 0;
+  }
+  footer .footer .social-media ul li.nav-link {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+@media (max-width: 720px) {
+  #hero .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    padding-top: 100px;
+  }
+  /* the games */
+  #sys-req .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  #sys-req .content-bottom {
+    width: 100%;
+    margin: 0 auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 5.29px;
+  }
+}
+
+@media (max-width: 640px) {
+  #the-games .wrapper {
+    padding-left: 25px;
+    padding-right: 25px;
+    background-size: contain;
+    display: flex;
+    align-items: center;
+  }
+  #the-games .carousel-wrapper .image img {
+    width: 100%;
+    height: auto;
+  }
+  #hero h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  #game-features .progress-bar ul li {
+    letter-spacing: 1px;
+  }
+  #newsletter .right .content .subscribe .form-wrapper {
+    flex-direction: column;
+    justify-content: center;
+  }
+  #newsletter .right .content .subscribe .form-wrapper .btn-wrapper {
+    padding: 20px 0 20px 0;
+  }
+  #newsletter .right .content .subscribe .subs {
+    height: 50px;
+  }
+  #newsletter .image img {
+    width: 75%;
+    height: auto;
+  }
+  #game-features .right-content {
+    width: 100%;
+  }
+  #game-features .content-text {
+    width: 50%;
+  }
+}
+@media (max-width: 630px) {
+  footer .footer-content-list .footer-section .section-item {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    padding-left: 0;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer .footer-content .author .wrapper .left {
+    text-align: center;
+  }
+
+  nav .wrapper .navigation {
+    width: 100%;
+  }
+}

@@ -1,0 +1,717 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+.main-content {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* navbar */
+nav {
+  background: rgba(0, 0, 0, 0.5);
+  margin: 0 auto;
+}
+nav .wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 107px;
+  padding-right: 162px;
+}
+
+nav .wrapper .navigation .menu {
+  display: flex;
+  list-style: none;
+  align-items: center;
+  margin: 0;
+  /* justify-content: space-between; */
+  gap: 30px;
+}
+
+nav .wrapper .navigation .menu .navbar-nav-login {
+  width: 75px;
+  /* margin-left: 1em; */
+}
+nav .wrapper .navigation .menu .navbar-nav-signup {
+  margin-left: 391px;
+  width: 75px;
+}
+nav .wrapper .navigation .menu .navbar-nav {
+  padding: 30px 0 30px 0;
+  display: flex;
+  width: 75px;
+}
+nav .wrapper .hamburger-menu {
+  display: none;
+  cursor: pointer;
+}
+nav .wrapper .hamburger-menu .wrapper-line .line {
+  width: 35px;
+  height: 4px;
+  background-color: white;
+  margin: 6px 0;
+  border-radius: 20px;
+}
+
+main h1 {
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* end navbar */
+
+/* hero section */
+#hero {
+  background: radial-gradient(
+      189.96% 61.18% at 50% 38.82%,
+      rgba(255, 181, 72, 0) 0%,
+      rgba(52, 44, 29, 0.80319) 73.22%,
+      #08090a 99.74%
+    ),
+    url("/assets/Group\ 1.png") no-repeat center center;
+  background-size: cover;
+  width: 100%;
+}
+#hero .wrapper {
+  padding-top: 313px;
+  color: #ffffff;
+}
+#hero h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 83px;
+  text-align: center;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+#hero h3 {
+  padding-top: 57px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+}
+
+#hero .cta-play {
+  padding-top: 57px;
+}
+
+#hero button {
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  border-radius: 4px;
+  border: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  color: #1a1917;
+  padding: 18px 60px;
+  text-transform: uppercase;
+}
+
+#hero .story {
+  padding-top: 285px;
+}
+/* end hero section */
+
+/* the games section */
+#the-games {
+  background: radial-gradient(
+      136.03% 54.57% at 50% 48.04%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 60.63%,
+      #080a0b 99.74%
+    ),
+    url("/assets/the-games-bg.jpg");
+  background-size: cover;
+  color: white;
+  width: 100%;
+}
+
+#the-games .text {
+  top: -60px;
+}
+#the-games .wrapper {
+  padding: 254px 97px 282px 80px;
+  display: flex;
+}
+#the-games .image {
+  padding-left: 11px;
+  padding-right: 17px;
+  /* width: 400px;
+  height: 200px; */
+}
+
+#the-games .text {
+  width: 360px;
+}
+#the-games h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+#the-games h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  /* padding-top: 13.56px; */
+}
+#the-games .carousel-wrapper {
+  display: flex;
+  align-items: center;
+  padding-top: 39px;
+}
+#the-games .carousel-wrapper .image img {
+  width: 100%;
+  height: auto;
+}
+#the-games .carousel-wrapper .image {
+  position: relative;
+}
+#the-games .carousel-wrapper .paginations {
+  display: flex;
+  gap: 35px;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  bottom: 10px;
+}
+#the-games .carousel-wrapper .paginations .dot {
+  width: 0.8em;
+  height: 0.8em;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+#the-games .carousel-wrapper .paginations .dot-full {
+  width: 0.8em;
+  height: 0.8em;
+  background-color: white;
+  border-radius: 100%;
+}
+/* end the games section */
+
+/* games-section */
+#game-features {
+  background: radial-gradient(
+      51.1% 80.48% at 30.85% 53.65%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 19.2%,
+      rgba(4, 5, 6, 0.520671) 47.48%,
+      #080a0b 99.74%
+    ),
+    url("/assets/features.jpg");
+  background-size: cover;
+  height: 870.26px;
+}
+
+#game-features .wrapper {
+  display: flex;
+  padding: 169px 233px 258px 793px;
+}
+#game-features .wrapper .content {
+  color: white;
+}
+#game-features .wrapper .content h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  width: 262px;
+  margin-bottom: 9;
+}
+#game-features .wrapper .content h1 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#game-features .progress-bar {
+  text-align: left;
+  padding-top: 71px;
+}
+#game-features .progress-bar ul {
+  list-style: none;
+  position: relative;
+}
+#game-features .progress-bar ul::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 125px;
+  background: white;
+  top: 0;
+  left: 5.9px;
+  margin-top: 13px;
+}
+#game-features .progress-bar ul li {
+  padding-bottom: 47px;
+  padding-left: 5px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #ffb548;
+}
+#game-features .progress-bar ul li::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border: 1px solid white;
+  border-radius: 100%;
+  left: 0;
+  z-index: 10;
+}
+#game-features .progress-bar ul li.active::before {
+  background-color: white;
+}
+#game-features .progress-bar ul li .content-text {
+  color: white;
+  text-transform: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: justify;
+  padding-top: 1em;
+  width: 100%;
+}
+/* end game-features section */
+
+/* sys-req section */
+#sys-req {
+  background: radial-gradient(
+      33.26% 45% at 64.32% 47.1%,
+      rgba(255, 255, 255, 0) 3.36%,
+      rgba(0, 0, 0, 0) 19.22%,
+      #080a0b 99.74%
+    ),
+    url("/assets/requirements.png") no-repeat center center;
+  height: 961.13px;
+  background-size: cover;
+}
+#sys-req .wrapper {
+  /* padding: 145px 520px 170px 121px; */
+  padding-top: 145px;
+  padding-bottom: 170px;
+}
+
+#sys-req .content-top h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 16px;
+  letter-spacing: 2px;
+  text-align: center;
+}
+#sys-req .content-bottom {
+  padding-top: 54.29px;
+  width: 640px;
+  padding-left: 121px;
+}
+
+#sys-req .content-bottom .grid {
+  padding-top: 87.73px;
+}
+#sys-req .content-bottom .grid .os {
+  border-bottom: none;
+}
+#sys-req .content-bottom .grid .text-wrapper {
+  padding-left: 7px;
+  padding-top: 15px;
+}
+#sys-req .content-bottom .grid .text-wrapper p.title {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+  color: #ffb548;
+  letter-spacing: 2px;
+}
+
+#sys-req .content-bottom .header {
+  text-align: left;
+  /* display: flex; */
+  padding-top: 50px;
+}
+#sys-req .content-bottom .header h1 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+#sys-req .content-bottom .grid .grid-wrapper .os {
+  border-right: 1px solid white;
+}
+
+#sys-req .content-bottom .grid .text-wrapper .title {
+  margin: 0;
+  padding-bottom: 7.38px;
+}
+#sys-req .content-bottom .grid .text-wrapper .desc-1 {
+  padding-bottom: calc(31.32px - 23px);
+}
+#sys-req .content-bottom .grid .text-wrapper .desc-2 {
+  padding-bottom: calc(75px - 47.84px);
+}
+#sys-req .content-bottom .grid .text-wrapper .desc-3 {
+  padding-bottom: 36.17px;
+}
+/* end sys-req section */
+
+/* top-scores section */
+#top-scores {
+  background: radial-gradient(
+      70.52% 37.27% at 24.21% 47.47%,
+      rgba(35, 15, 15, 0) 0%,
+      rgba(0, 0, 0, 0) 51.1%,
+      #080a0b 99.74%
+    ),
+    url("/assets/top-score-bg.png");
+  width: 100%;
+  /* height: 960.16px; */
+}
+#top-scores .wrapper {
+  padding: 159.59px 119px 147.69px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#top-scores .content-left-wrapper {
+  width: 410.93px;
+}
+#top-scores .content-left-wrapper h1 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 56px;
+  line-height: 64px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  padding-bottom: 40px;
+}
+#top-scores .content-left-wrapper p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  padding-bottom: 40px;
+}
+
+#top-scores .content-left-wrapper button {
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  border-radius: 4px;
+  border: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+  text-transform: lowercase;
+  color: #1a1917;
+  width: 230.36px;
+  height: 60px;
+}
+#top-scores .content-right .card {
+  width: 452.59px;
+  /* height: 182.94px; */
+  margin-bottom: 30px;
+}
+#top-scores .content-right .card.jada-griffin {
+  right: 145px;
+}
+#top-scores .content-right .card.aaron-williams {
+  /* padding-right: calc(264.44px - 119.61px); */
+  right: 39px;
+}
+#top-scores .content-right .card .card-wrapper {
+  padding: 17px;
+}
+#top-scores .content-right .card .card-wrapper .avatar-img {
+  width: 65px;
+  height: 65px;
+  border-radius: 100%;
+  background-color: #f3af34;
+  right: 7px;
+  bottom: 5px;
+}
+#top-scores .content-right .card.evan-lahti .card-wrapper .avatar-img {
+  background: url("/assets/evan-lahti.jpg");
+}
+#top-scores .content-right .card.jada-griffin .card-wrapper .avatar-img {
+  background: url("/assets/jada-griffin.jpg");
+}
+#top-scores .content-right .card.aaron-williams .card-wrapper .avatar-img {
+  background: url("/assets/aaron-williams.jpg");
+}
+#top-scores .content-right .card .card-wrapper .avatar-bg {
+  width: 64px;
+  height: 64px;
+  border-radius: 100%;
+  background-color: #f3af34;
+}
+#top-scores
+  .content-right
+  .content-right-wrapper
+  .card
+  .card-wrapper
+  .avatar-name
+  .name
+  .name-title {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffb548;
+}
+#top-scores
+  .content-right
+  .content-right-wrapper
+  .card
+  .card-wrapper
+  .avatar-name
+  .name {
+  padding-left: 22.27px;
+}
+
+#top-scores .content-right .bottom {
+  padding-top: 22.74px;
+}
+#top-scores .content-right .bottom .bottom-wrapper {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 25px;
+}
+#top-scores .content-right .bottom .bottom-wrapper p {
+  padding-top: 8.51px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+}
+/* end top-scores section */
+
+/* newsletter section */
+#newsletter {
+  background: radial-gradient(
+      78.66% 177.87% at 19.56% 37.57%,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(0, 0, 0, 0) 19.22%,
+      #080a0b 99.74%
+    ),
+    url("/assets/newsletter.png");
+  width: 100%;
+  background-size: cover;
+}
+#newsletter .wrapper {
+  padding: 50px 128.29px;
+}
+
+#newsletter .wrapper-content {
+  display: flex;
+  justify-content: space-between;
+}
+#newsletter .image {
+  padding-left: 31px;
+  display: flex;
+  width: 100%;
+}
+
+#newsletter .image img {
+  width: 100%;
+  height: auto;
+}
+#newsletter .right .content {
+  padding-top: 86px;
+}
+#newsletter .right-wrapper {
+  padding-left: 67.45px;
+}
+#newsletter .right .content .stay-in-touch {
+  width: 261.56px;
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  color: #ffffff;
+}
+#newsletter .right .content .stay-in-touch h3 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+#newsletter .right .content .title h1 {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 65px;
+  line-height: 75px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #ffffff;
+}
+#newsletter .right .content .content-text {
+  padding-top: 20px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+  color: #ffffff;
+}
+#newsletter .right .content .content-text p {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 22px;
+}
+#newsletter .right .content .subscribe {
+  padding-top: 40px;
+  /* width: 100%; */
+  margin: 0;
+}
+#newsletter .right .content .subscribe .email-input {
+  /* padding-top: 40px; */
+  /* width: 50px; */
+  border-radius: 5px;
+  position: relative;
+  flex: 1;
+}
+#newsletter .right .content .subscribe .email-input label {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 19px;
+  padding-left: 17.22px;
+  color: #ffffff;
+  mix-blend-mode: normal;
+  opacity: 0.5;
+  border-radius: 4px;
+  position: absolute;
+  top: 6.14px;
+  left: 5px;
+}
+#newsletter .right .content .subscribe .email-input input[type="email"] {
+  background: rgba(255, 255, 255, 0.08);
+  padding-top: 27px;
+  padding-bottom: 6px;
+  padding-left: 21px;
+  border-radius: 5px;
+  color: #ffb548;
+}
+#newsletter
+  .right
+  .content
+  .subscribe
+  .email-input
+  input[type="email"]::placeholder {
+  position: relative;
+  color: #ffb548;
+}
+#newsletter .right .content .subscribe .subs {
+  /* padding-top: 40px; */
+  width: 230px;
+  background: linear-gradient(194.68deg, #ffb548 11.27%, #f3af34 90.4%);
+  border-radius: 4px;
+  border: none;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  height: 100%;
+  /* identical to box height */
+
+  text-align: center;
+  text-transform: capitalize;
+
+  color: #1a1917;
+}
+#newsletter .right .content .subscribe .btn-wrapper {
+  padding-left: 17.22px;
+}
+/* end newsletter section */
+
+/* footer section */
+footer .footer-content-list {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+}
+footer ul li {
+  list-style: none;
+}
+footer .footer-content-list .footer-section .section-item {
+  display: flex;
+  gap: 40px;
+}
+footer .footer-content-list .footer-section .section-item .list-item {
+  cursor: pointer;
+}
+
+footer .footer-content-list .social-media .bowl {
+  display: flex;
+  padding-left: 86px;
+  gap: 50px;
+}
+/* end footer section */

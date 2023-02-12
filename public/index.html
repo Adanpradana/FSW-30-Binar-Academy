@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="responsive.css" />
+    <link
+      rel="stylesheet"
+      href="node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main-content">
+      <nav class="fixed-top text-white">
+        <div class="wrapper">
+          <div class="logo">
+            <h1>logo</h1>
+          </div>
+          <div class="navigation">
+            <ul id="navbar" class="menu">
+              <li class="">home</li>
+              <li class="navbar-nav">work</li>
+              <li class="navbar-nav">contact</li>
+              <li class="navbar-nav">about me</li>
+              <li class="navbar-nav-signup">sign up</li>
+              <li class="navbar-nav-login">login</li>
+            </ul>
+          </div>
+          <div class="hamburger-menu" onclick="hamburger()">
+            <div class="wrapper-line">
+              <div class="line"></div>
+              <div class="line"></div>
+              <div class="line"></div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <section id="hero" class="text-center">
+        <div class="wrapper">
+          <div class="play">
+            <h1>play traditional game</h1>
+            <h3>Experience new traditional game play</h3>
+          </div>
+          <div class="cta-play">
+            <button onclick="target('rockPaperScissor')">TRIAL</button>
+          </div>
+          <div class="story">
+            <div>THE STORY</div>
+            <img src="/assets/scroll down.svg" alt="" />
+          </div>
+        </div>
+      </section>
+      <section id="the-games">
+        <div class="wrapper">
+          <div class="left-content">
+            <div class="text">
+              <h3>What's so special</h3>
+              <h1>the games</h1>
+            </div>
+          </div>
+          <div class="carousel">
+            <div class="carousel-wrapper">
+              <div class="silder">
+                <img src="assets/switch-new-left.svg" alt="" />
+              </div>
+              <div class="image">
+                <img
+                  src="/assets/rockpaperstrategy-1600 1123123123123.png"
+                  alt=""
+                  class="responsive"
+                />
+                <div class="paginations">
+                  <div class="dot dot-full"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </div>
+              <div class="silder">
+                <img src="assets/switch-new-right.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="game-features">
+        <div class="wrapper">
+          <div class="right-content w-50">
+            <div class="content position-relative">
+              <h3>What's so special</h3>
+              <h1>features</h1>
+              <div class="progress-bar position-absolute">
+                <ul>
+                  <li class="active">
+                    traditional games
+                    <div class="content-text">
+                      if you miss your childhood, we provide <br />
+                      many traditional games here
+                    </div>
+                  </li>
+                  <li>game suit</li>
+                  <li>tbd</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="sys-req">
+        <div class="wrapper">
+          <div class="text-white content-top">
+            <h3 class="sysreq">Can My Computer Run This game ?</h3>
+          </div>
+          <div class="content-bottom text-white">
+            <!-- <div class="wrapper-container"> -->
+            <div class="header">
+              <h1>system requirements</h1>
+            </div>
+            <div class="grid">
+              <div class="grid-wrapper">
+                <div class="row row-cols-1 row-cols-md-2 border border-os">
+                  <div class="col os">
+                    <div class="text-wrapper">
+                      <p class="title">os:</p>
+                      <p class="desc-1">
+                        Windows 7 64-bit only (No OSX support at this time)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="text-wrapper">
+                      <p class="title">processor:</p>
+                      <p class="desc-1">
+                        Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-cols-1 row-cols-md-2 border-top-0 border">
+                  <div class="col os">
+                    <div class="text-wrapper">
+                      <p class="title">memory:</p>
+                      <p class="desc-2">4 gb ram</p>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="text-wrapper">
+                      <p class="title">storage:</p>
+                      <p class="desc-2">8gb available space</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row row-cols-1 border border-top-0">
+                  <div class="col">
+                    <div class="text-wrapper">
+                      <p class="title">GRAPHICS:</p>
+                      <p class="desc-3 m-0">
+                        NVIDIA GeForce GTX 660 2GB or AMD Radeon HD 7850 2GB
+                        DirectX11 (Shader Model 5)
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="top-scores">
+        <div class="wrapper text-white">
+          <div class="content-left">
+            <div class="content-left-wrapper">
+              <h1>top scores</h1>
+              <p>This top score from various games provided on this platform</p>
+              <button>see more</button>
+            </div>
+          </div>
+          <div class="content-right">
+            <div class="content-right-wrapper">
+              <div class="card bg-dark evan-lahti">
+                <div class="card-wrapper">
+                  <div class="top d-flex justify-content-between">
+                    <div class="avatar-name d-flex">
+                      <div class="avatar">
+                        <div class="">
+                          <div class="avatar-bg position-relative">
+                            <div class="avatar-img position-absolute"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="name text-bg-dark d-flex align-items-center">
+                        <div>
+                          <div>
+                            <p class="m-0 name-title">Evan Lahti</p>
+                          </div>
+                          <p class="m-0">PC Gamer</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="icon bg-dark">
+                      <img src="/assets/twitter.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="bottom text-dark">
+                    <div class="bottom-wrapper p-0 text-white">
+                      <q>One of my gaming highlights of the year.</q>
+                      <p>June 18, 2021</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-dark jada-griffin">
+                <div class="card-wrapper">
+                  <div class="top d-flex justify-content-between">
+                    <div class="avatar-name d-flex">
+                      <div class="avatar">
+                        <div class="">
+                          <div class="avatar-bg position-relative">
+                            <div class="avatar-img position-absolute"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="name text-bg-dark d-flex align-items-center">
+                        <div>
+                          <div>
+                            <p class="m-0 name-title">Jada Griffin</p>
+                          </div>
+                          <p class="m-0">Nerdreactor</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="icon bg-dark">
+                      <img src="/assets/twitter.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="bottom text-dark">
+                    <div class="bottom-wrapper p-0 text-white">
+                      <q
+                        >The next big thing in the world of streaming and
+                        survival games.
+                      </q>
+                      <p>July 10, 2021</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="card bg-dark aaron-williams">
+                <div class="card-wrapper">
+                  <div class="top d-flex justify-content-between">
+                    <div class="avatar-name d-flex">
+                      <div class="avatar">
+                        <div class="">
+                          <div class="avatar-bg position-relative">
+                            <div class="avatar-img position-absolute"></div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="name text-bg-dark d-flex align-items-center">
+                        <div>
+                          <div>
+                            <p class="m-0 name-title">Aaron Williams</p>
+                          </div>
+                          <p class="m-0">Uproxx</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="icon bg-dark">
+                      <img src="/assets/twitter.svg" alt="" />
+                    </div>
+                  </div>
+                  <div class="bottom text-dark">
+                    <div class="bottom-wrapper p-0 text-white">
+                      <q
+                        >Snoop Dogg Playing The Wildly Entertaining
+                        &lsquo;SOS&lsquo; Is Ridiculous.</q
+                      >
+                      <p>December 24, 2018</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="newsletter">
+        <div class="wrapper">
+          <div class="wrapper-content">
+            <div class="image">
+              <img src="/assets/skull.png" alt="" />
+            </div>
+            <div class="right">
+              <div class="right-wrapper">
+                <div class="content">
+                  <div class="stay-in-touch">
+                    <h3>Want to stay in touch?</h3>
+                  </div>
+                  <div class="title">
+                    <h1>newsletter SUBSCRIBE</h1>
+                  </div>
+                  <div class="content-text">
+                    <p>
+                      In order to start receiving our news, all you have to do
+                      is enter your email address. Everything else will be taken
+                      care of by us. We will send you emails containing
+                      information about game. We don&lsquo;t spam.
+                    </p>
+                  </div>
+                  <div class="subscribe">
+                    <form>
+                      <div class="d-flex align-items-stretch form-wrapper">
+                        <div class="email-input bg-dark">
+                          <label for="email">Your email address</label>
+                          <input
+                            type="email"
+                            name="email"
+                            id="email"
+                            class="w-100"
+                            placeholder="youremail@binar.com"
+                          />
+                        </div>
+                        <div class="btn-wrapper">
+                          <button type="submit" class="subs">
+                            subscribe now
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <footer class="text-white">
+            <div class="footer-content pX-0">
+              <div class="footer-content-list">
+                <div class="footer-section">
+                  <ul class="section-item">
+                    <li class="list-item home" onclick="target('main')">
+                      main
+                    </li>
+                    <li class="list-item" onclick="target('about')">about</li>
+                    <li class="list-item" onclick="target('games')">
+                      game features
+                    </li>
+                    <li class="list-item" onclick="target('sysReq')">
+                      system-requirements
+                    </li>
+                    <li class="list-item" onclick="target('quotes')">quotes</li>
+                  </ul>
+                </div>
+                <div class="social-media">
+                  <ul class="bowl">
+                    <li class="list-item">
+                      <img src="/assets/facebook.svg" alt="" />
+                    </li>
+                    <li class="list-item">
+                      <img src="/assets/twitter.svg" alt="" />
+                    </li>
+                    <li class="list-item">
+                      <img src="/assets/vector.svg" alt="" />
+                    </li>
+                    <li class="list-item">
+                      <img src="/assets/twitch.svg" alt="" />
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="line-break">
+                <div class="wrapper p-0">
+                  <hr />
+                </div>
+              </div>
+              <div class="author">
+                <div class="wrapper d-flex justify-content-between p-0">
+                  <div class="left">
+                    <p>
+                      © 2018 Moh Rizka Haris Pradana @Adanpradanaa, Inc. All
+                      Rights Reserved
+                    </p>
+                  </div>
+                  <div class="right">
+                    <p>Privacy Policy | Terms of Services | Code of Conduct</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </section>
+    </main>
+    <script src="index.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+  </body>
+</html>
