@@ -21,11 +21,7 @@ function createUsers(req, res) {
 }
 
 function findAll(req, res) {
-  try {
-    res.status(200).json({ message: "success get all data!", payload: users });
-  } catch (error) {
-    console.log(error.message);
-  }
+  res.status(200).json({ message: "success get all data!", payload: users });
 }
 
 const findOne = async (req, res) => {
