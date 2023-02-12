@@ -1,9 +1,9 @@
 const users = require("../database/connection");
 const { v4: uuidv4 } = require("uuid");
+
 function main(req, res) {
   res.sendFile("/");
 }
-
 function games() {
   res.sendFile("/games");
 }
