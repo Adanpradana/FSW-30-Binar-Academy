@@ -3,17 +3,13 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const path = require("path");
-const users = require("./controller/users");
+const userRoutes = require("./routes/routes");
+const createLog = require("./middleware/logging");
 
 app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.static(path.join(__dirname, "/")));
 app.use(bodyParser.json());
-
-app.get("/", users.main);
-app.get("/games", users.games);
-app.get("/users", users.findAll);
-app.post("/users", users.createUsers);
-app.post("/auth/login", users.findOne);
-app.get("*", (req, res) => res.status(404).json({ message: "404, not found" }));
+app.use(createLog);
+app.use(userRoutes);
 
 app.listen(port, () => console.log(`running in port ${port}`));

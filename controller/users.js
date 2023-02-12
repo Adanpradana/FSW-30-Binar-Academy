@@ -25,13 +25,13 @@ function findAll(req, res) {
 }
 
 const findOne = async (req, res) => {
-  const { userName, password } = req.body;
+  const { name, password } = req.body;
   try {
     const user = await users.find(
-      (user) => user.name === userName && user.password === password
+      (user) => user.name === name && user.password === password
     );
     user
-      ? res.status(200).json({ data: user })
+      ? res.status(200).json({ message: "login success !", data: user })
       : res.status(200).json({ message: "password doesn't match!" });
   } catch {
     res.status(400).json({ message: error.message });
