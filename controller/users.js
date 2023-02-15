@@ -8,7 +8,7 @@ function games() {
   res.sendFile("/games");
 }
 
-function createUsers(req, res) {
+const createUsers = async (req, res) => {
   const { name, role, password } = req.body;
   const data = {
     id: uuidv4(),
@@ -16,9 +16,19 @@ function createUsers(req, res) {
     role,
     password,
   };
-  users.push(data);
-  res.status(200).json({ message: "success create users !", data });
-}
+  try {
+    const user = await users.find(
+      (user) => user.name === name && user.password === password
+    );
+    if (user) {
+      return res.json({ message: "username already exist" });
+    }
+    users.push(data);
+    res.status(200).json({ message: "success create users !", data });
+  } catch {
+    res.status(500).json({ message: "internal server error!" });
+  }
+};
 
 function findAll(req, res) {
   res.status(200).json({ message: "success get all data!", payload: users });
