@@ -8,7 +8,7 @@ const createLog = require("./middleware/logging");
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "/")));
-app.use(express.static(path.join(__dirname, "/views")));
+app.use(express.static(path.join(__dirname, "/views/assets/css")));
 app.set("view engine", "ejs");
 app.set("views", "views");
 app.use(bodyParser.json());
