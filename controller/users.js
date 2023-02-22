@@ -1,12 +1,8 @@
 const users = require("../database/connection");
 const { v4: uuidv4 } = require("uuid");
 
-function main(req, res) {
-  res.sendFile("/");
-}
-function games() {
-  res.sendFile("/games");
-}
+const main = (req, res) => res.render("index");
+// const games = (req, res) => res.render("/games");
 
 const createUsers = async (req, res) => {
   const { name, role, password } = req.body;
@@ -48,4 +44,4 @@ const findOne = async (req, res) => {
   }
 };
 
-module.exports = { main, createUsers, games, findAll, findOne };
+module.exports = { main, createUsers, findAll, findOne };
