@@ -4,15 +4,16 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="responsive.css" />
+    <link rel="stylesheet" href="../assets/css/games/style.css" />
+    <link rel="stylesheet" href="../assets/css/games/responsive.css" />
+    <link rel="stylesheet" href="../../node_modules/bootstrap/dist/css/" />
     <title>Document</title>
   </head>
   <body>
     <section class="container">
       <div class="top">
         <p class="back"><</p>
-        <img src="/assets/logo 1.png" alt="" />
+        <img src="/assets/images/logo 1.png" alt="" />
         <p class="rock">ROCK PAPER SCISSORS</p>
       </div>
       <div class="bottom">
@@ -24,12 +25,12 @@
               class="img-wrapper-gray start"
               onclick="startGame('rock')"
             >
-              <img src="/assets/batu 1.png" alt="" class="rock" />
+              <img src="/assets/images/batu 1.png" alt="" class="rock" />
             </div>
             <div id="p-scissor" class="img-wrapper-gray start">
               <img
                 id="p-scissor"
-                src="/assets/gunting 1.png"
+                src="/assets/images/gunting 1.png"
                 alt=""
                 class="scissor"
                 onclick="startGame('scissor')"
@@ -37,7 +38,7 @@
             </div>
             <div id="p-paper" class="img-wrapper-gray start">
               <img
-                src="/assets/kertas 1.png"
+                src="/assets/images/kertas 1.png"
                 alt=""
                 class="paper"
                 onclick="startGame('paper')"
@@ -53,13 +54,13 @@
           <p class="player">COM</p>
           <div class="img-wrapper bot">
             <div class="img-wrapper-gray" id="botRock">
-              <img src="/assets/batu 1.png" alt="" class="rock" />
+              <img src="/assets/images/batu 1.png" alt="" class="rock" />
             </div>
             <div class="img-wrapper-gray" id="botScissor">
-              <img src="/assets/gunting 1.png" alt="" class="scissor" />
+              <img src="/assets/images/gunting 1.png" alt="" class="scissor" />
             </div>
             <div class="img-wrapper-gray" id="botPaper">
-              <img src="/assets/kertas 1.png" alt="" class="paper" />
+              <img src="/assets/images/kertas 1.png" alt="" class="paper" />
             </div>
           </div>
         </div>
@@ -68,7 +69,7 @@
         class="refresh"
         onclick="function reload(){location.reload();} ; reload(); "
       >
-        <img src="/assets/refresh 2.png" alt="" />
+        <img src="/assets/images/refresh 2.png" alt="" />
       </div>
     </section>
     <script src="script.js"></script>
