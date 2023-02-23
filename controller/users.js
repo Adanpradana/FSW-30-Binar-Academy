@@ -6,18 +6,14 @@ const games = (req, res) => res.render("pages/games");
 
 const createUsers = async (req, res) => {
   const { user_name, password } = req.body;
-  const data = {
-    user_name,
-    password,
-  };
   try {
-    const user = await users.create(data);
-    if (user) {
-      res.status(200).json({ message: "success create users !", user });
-    }
-    return res.json({ message: "username already exist" });
-  } catch {
-    res.status(500).json({ message: "internal server error!" });
+    const user = await users.create({
+      user_name,
+      password,
+    });
+    res.status(200).json({ message: "success create users !" });
+  } catch (error) {
+    res.status(500).json({ message: error.errors });
   }
 };
 

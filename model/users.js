@@ -21,6 +21,6 @@ const users = db.define("users_games", {
     unique: false,
   },
 });
-// users.sync({ force: true });
+// users.sync();
 console.log("user table sync complete!");
 module.exports = users;
