@@ -1,7 +1,8 @@
 const users = require("../database/connection");
 const { v4: uuidv4 } = require("uuid");
 
-const main = (req, res) => res.render("pages/index");
+const main = (req, res) =>
+  res.render("pages/index", { title: "What's so special" });
 const games = (req, res) => res.render("pages/games");
 
 const createUsers = async (req, res) => {
