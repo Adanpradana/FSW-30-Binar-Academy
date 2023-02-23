@@ -1,35 +1,38 @@
-const users = require("../database/connection");
-const { v4: uuidv4 } = require("uuid");
+const users = require("../model/model");
 
 const main = (req, res) =>
   res.render("pages/index", { title: "What's so special" });
 const games = (req, res) => res.render("pages/games");
 
 const createUsers = async (req, res) => {
-  const { name, role, password } = req.body;
+  const { user_name, password } = req.body;
   const data = {
-    id: uuidv4(),
-    name,
-    role,
+    user_name,
     password,
   };
   try {
-    const user = await users.find(
-      (user) => user.name === name && user.password === password
-    );
+    const user = await users.create(data);
     if (user) {
-      return res.json({ message: "username already exist" });
+      res.status(200).json({ message: "success create users !", user });
     }
-    users.push(data);
-    res.status(200).json({ message: "success create users !", data });
+    return res.json({ message: "username already exist" });
   } catch {
     res.status(500).json({ message: "internal server error!" });
   }
 };
 
-function findAll(req, res) {
-  res.status(200).json({ message: "success get all data!", payload: users });
-}
+const findAll = async (req, res) => {
+  try {
+    const result = await users.findAll();
+    result.length > 0
+      ? res
+          .status(200)
+          .json({ message: "success get all data", payload: result })
+      : res.status(200).json({ message: "users is empty!" });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
 
 const findOne = async (req, res) => {
   const { name, password } = req.body;
