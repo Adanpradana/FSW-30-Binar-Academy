@@ -7,7 +7,9 @@ router.get("/games", users.games);
 
 router.get("/users", users.findAll);
 router.post("/users", users.createUsers);
-router.post("/auth/login", users.findOne);
+router.put("/users/:_id", users.editUsers);
+router.delete("/users/:_id", users.deleteUsers);
+router.post("/auth/login", users.login);
 router.get("*", (req, res) =>
   res.status(404).json({ message: "404, not found" })
 );

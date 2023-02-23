@@ -4,6 +4,16 @@ const main = (req, res) =>
   res.render("pages/index", { title: "What's so special" });
 const games = (req, res) => res.render("pages/games");
 
+const findAll = async (req, res) => {
+  try {
+    const result = await users.findAll();
+    result.length > 0
+      ? res.status(200).json({ message: "success get all data", data: result })
+      : res.status(200).json({ message: "users is empty!" });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
 const createUsers = async (req, res) => {
   const { user_name, password } = req.body;
   try {
@@ -13,24 +23,44 @@ const createUsers = async (req, res) => {
     });
     res.status(200).json({ message: "success create users !" });
   } catch (error) {
-    res.status(500).json({ message: error.errors });
+    res.status(500).json({ message: error.message });
   }
 };
-
-const findAll = async (req, res) => {
+const editUsers = async (req, res) => {
+  const { _id } = req.params;
+  const { user_name, password } = req.body;
   try {
-    const result = await users.findAll();
-    result.length > 0
-      ? res
-          .status(200)
-          .json({ message: "success get all data", payload: result })
-      : res.status(200).json({ message: "users is empty!" });
+    const user = await users.update(
+      {
+        user_name,
+        password,
+      },
+      {
+        where: {
+          _id,
+        },
+      }
+    );
+    res.status(200).json({ message: "success update users", data: user });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+const deleteUsers = async (req, res) => {
+  const { _id } = req.params;
+  try {
+    const user = await users.destroy({
+      where: {
+        _id,
+      },
+    });
+    res.status(200).json({ message: "users deleted !" });
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
 
-const findOne = async (req, res) => {
+const login = async (req, res) => {
   const { name, password } = req.body;
   try {
     const user = await users.find(
@@ -44,4 +74,12 @@ const findOne = async (req, res) => {
   }
 };
 
-module.exports = { main, createUsers, games, findAll, findOne };
+module.exports = {
+  main,
+  createUsers,
+  games,
+  findAll,
+  login,
+  editUsers,
+  deleteUsers,
+};
