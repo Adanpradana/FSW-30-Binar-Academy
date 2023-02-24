@@ -61,15 +61,18 @@ const deleteUsers = async (req, res) => {
 };
 
 const login = async (req, res) => {
-  const { name, password } = req.body;
+  const { user_name, password } = req.body;
   try {
-    const user = await users.find(
-      (user) => user.name === name && user.password === password
-    );
+    const user = await users.findOne({
+      where: {
+        user_name,
+        password,
+      },
+    });
     user
-      ? res.status(200).json({ message: "login success !", data: user })
-      : res.status(200).json({ message: "password doesn't match!" });
-  } catch {
+      ? res.status(200).json({ message: "oke", data: user })
+      : res.status(402).json({ message: "invalid username & password" });
+  } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
