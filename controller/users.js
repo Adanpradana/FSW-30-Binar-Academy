@@ -69,16 +69,21 @@ const login = async (req, res) => {
         password,
       },
     });
-    user
-      ? res.status(200).json({ message: "oke", data: user })
-      : res.status(402).json({ message: "invalid username & password" });
+    user.length > 0 ? res.render("pages/dashboard") : res.redirect("/login");
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
-
+const dashboard = (req, res) => {
+  res.render("pages/dashboard");
+};
+const loginPage = (req, res) => {
+  res.render("pages/login");
+};
 module.exports = {
   main,
+  loginPage,
+  dashboard,
   createUsers,
   games,
   findAll,
