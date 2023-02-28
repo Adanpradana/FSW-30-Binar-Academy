@@ -7,6 +7,12 @@
     <title>dahsboard</title>
   </head>
   <body>
-    <div>welcome users to dashboard</div>
+    <div>welcome <%= message %> to dashboard</div>
+    <br />
+    <div>
+      <form action="/auth/logout" method="get">
+        <input type="submit" value="logout here" />
+      </form>
+    </div>
   </body>
 </html>

@@ -5,6 +5,15 @@ const bodyParser = require("body-parser");
 const path = require("path");
 const userRoutes = require("./routes/routes");
 const createLog = require("./middleware/logging");
+const session = require("express-session");
+
+app.use(
+  session({
+    secret: "secret",
+    resave: "true",
+    saveUninitialized: true,
+  })
+);
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, "/")));

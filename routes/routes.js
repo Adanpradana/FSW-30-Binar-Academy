@@ -2,9 +2,11 @@ const express = require("express");
 const router = express.Router();
 const users = require("../controller/users");
 
+router.post("/auth/login", users.login);
+router.get("/auth/logout", users.logOutHandler);
+
 router.get("/", users.main);
 router.get("/games", users.games);
-router.post("/auth/login", users.login);
 router.get("/dashboard", users.dashboard);
 router.get("/login", users.loginPage);
 router.get("/users", users.findAll);

@@ -2,7 +2,19 @@ const users = require("../model/model");
 
 const main = (req, res) =>
   res.render("pages/index", { title: "What's so special" });
-const games = (req, res) => res.render("pages/games");
+const games = (req, res) => {
+  try {
+    if (req.session.loggedin)
+      res.render("pages/games", {
+        message: req.session.username,
+      });
+    else {
+      res.redirect("/login");
+    }
+  } catch (error) {
+    res.send({ message: error.message });
+  }
+};
 
 const findAll = async (req, res) => {
   try {
@@ -69,18 +81,35 @@ const login = async (req, res) => {
         password,
       },
     });
-    user.length > 0 ? res.render("pages/dashboard") : res.redirect("/login");
+    if (user) {
+      req.session.loggedin = true;
+      req.session.username = user_name;
+      res.redirect("/games");
+    } else {
+      res.redirect("/login", { message: "incorrect uname & password" });
+    }
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
 };
 const dashboard = (req, res) => {
-  res.render("pages/dashboard");
+  if (req.session.loggedin)
+    res.render("pages/dashboard", {
+      message: req.session.username,
+    });
+  else {
+    res.redirect("/login");
+  }
 };
 const loginPage = (req, res) => {
   res.render("pages/login");
 };
+const logOutHandler = (req, res) => {
+  req.session.destroy();
+  res.redirect("/");
+};
 module.exports = {
+  logOutHandler,
   main,
   loginPage,
   dashboard,

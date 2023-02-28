@@ -18,11 +18,19 @@ html {
 
 .top {
   display: flex;
-  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.content {
+  display: flex;
   align-items: center;
   gap: 25px;
 }
+a {
+  text-decoration: none;
+}
 .back {
+  cursor: pointer;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
@@ -132,4 +140,16 @@ html {
 #botRock,
 #botPaper {
   border-radius: 10px;
+}
+
+.btn {
+  background-color: rgb(218, 62, 62);
+  border: none;
+  color: white;
+  border-radius: 5px;
+}
+.btn p {
+  padding: 10px 20px;
+  font-size: 1.3rem;
+  font-weight: 400;
 }
