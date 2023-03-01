@@ -1,4 +1,5 @@
-const users = require("../model/model");
+const { PrismaClient } = require("@prisma/client");
+const prisma = new PrismaClient();
 
 const main = (req, res) =>
   res.render("pages/index", { title: "What's so special" });
@@ -18,7 +19,7 @@ const games = (req, res) => {
 
 const findAll = async (req, res) => {
   try {
-    const result = await users.findAll();
+    const result = await prisma.user_game.findMany();
     result.length > 0
       ? res.status(200).json({ message: "success get all data", data: result })
       : res.status(200).json({ message: "users is empty!" });
@@ -27,15 +28,19 @@ const findAll = async (req, res) => {
   }
 };
 const createUsers = async (req, res) => {
-  const { user_name, password } = req.body;
+  const { name, email, password } = req.body;
   try {
-    const user = await users.create({
-      user_name,
-      password,
+    const users = await prisma.user_game.create({
+      data: {
+        name,
+        email,
+        password,
+      },
     });
-    res.status(200).json({ message: "success create users !" });
+    res.status(200).json({ message: "success create users", data: users });
+    res.status();
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    res.status(400).json({ message: error });
   }
 };
 const editUsers = async (req, res) => {
