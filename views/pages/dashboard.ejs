@@ -5,38 +5,111 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
-    <title>dahsboard</title>
+    <title>dashboard</title>
   </head>
   <body>
-    <div>welcome <%= message %> to dashboard</div>
-    <br />
     <div>
       <% if (data.alert) {%>
-
       <div id="alert" class="alert alert-danger" role="alert">
         <%= data.alert %>
       </div>
       <% } %>
     </div>
-    <div class="container">
-      <button class="btn btn-success">
-        <a href="/users/create"> Create </a>
-      </button>
-      <br />
-      <table class="table table-striped">
-        <tr>
-          <th>#</th>
-          <th>user name</th>
-          <th>user email</th>
-        </tr>
-        <% data.users.forEach((user,index) => {%>
-        <tr>
-          <td><%= index+1 %></td>
-          <td><%= user.name %></td>
-          <td><%= user.email %></td>
-        </tr>
-        <% }); %>
-      </table>
+    <div class="container card card-body">
+      <div
+        class="container w-75 d-flex align-items-center justify-content-center flex-column"
+      >
+        <div class="w-75">
+          <p class="container d-flex justify-content-center">
+            <a
+              class="btn btn-primary"
+              data-bs-toggle="collapse"
+              href="#collapseExample"
+              role="button"
+              aria-expanded="false"
+              aria-controls="collapseExample"
+            >
+              Create Users
+            </a>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              <form action="/api/users/create" method="post">
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Username</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    name="name"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >Email address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    name="email"
+                  />
+                  <div id="emailHelp" class="form-text">
+                    We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputPassword1" class="form-label"
+                    >Password</label
+                  >
+                  <input
+                    type="password"
+                    class="form-control"
+                    id="exampleInputPassword1"
+                    name="password"
+                  />
+                </div>
+                <div class="mb-3 form-check"></div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <br />
+        <table class="table table-striped w-75">
+          <tr>
+            <th>#</th>
+            <th>user name</th>
+            <th>user email</th>
+            <th>action</th>
+          </tr>
+          <% data.users.forEach((user,index) => {%>
+          <tr>
+            <td><%= index+1 %></td>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td>
+              <div class="d-flex gap-3">
+                <button
+                  class="btn btn-primary text-white"
+                  action=
+                >
+                  <a href="/users/edit/<%= user.id %>"> edit </a>
+                </button>
+                <form action="api/users/remove" method="post">
+                  <input type="text" hidden name="id" value="<%= user.id %>" />
+                  <button type="submit" class="btn btn-danger">delete</button>
+                </form>
+              </div>
+            </td>
+          </tr>
+          <% }); %>
+        </table>
+      </div>
     </div>
     <div>
       <form action="/auth/logout" method="get">
@@ -44,10 +117,5 @@
       </form>
     </div>
   </body>
-  <script>
-    const alert = document.getElementById("alert");
-    setTimeout(() => {
-      alert.style.displpay = "none";
-    }, 1000);
-  </script>
+  <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
 </html>

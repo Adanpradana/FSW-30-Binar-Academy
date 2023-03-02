@@ -13,7 +13,7 @@ app.use(
     secret: "secret",
     resave: "true",
     saveUninitialized: true,
-    maxAge: 3600000,
+    maxAge: 3600000000,
   })
 );
 app.use(flash());

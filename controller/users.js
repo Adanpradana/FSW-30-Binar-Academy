@@ -37,7 +37,7 @@ const createUsers = async (req, res) => {
         password,
       },
     });
-    res.redirect("/dashboard");
+    users ? res.redirect("/dashboard") : console.log("cant be empty");
   } catch (error) {
     res.status(400).json({ message: error });
   }
@@ -90,14 +90,14 @@ const editUsers = async (req, res) => {
   }
 };
 const deleteUsers = async (req, res) => {
-  const { _id } = req.params;
+  const { id } = req.body;
   try {
-    const user = await users.destroy({
+    const user = await prisma.user_game.delete({
       where: {
-        _id,
+        id,
       },
     });
-    res.status(200).json({ message: "users deleted !" });
+    res.redirect("/dashboard");
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -125,11 +125,11 @@ const logOutHandler = (req, res) => {
   res.redirect("/");
 };
 
-const renderCreate = (req, res) => {
-  if (req.session.loggedin) res.render("pages/create");
+const renderEdit = (req, res) => {
+  if (req.session.loggedin) res.render("pages/edit");
 };
 module.exports = {
-  renderCreate,
+  renderEdit,
   logOutHandler,
   main,
   loginPage,
