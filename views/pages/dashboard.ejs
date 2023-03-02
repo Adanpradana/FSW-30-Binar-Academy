@@ -4,15 +4,50 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
     <title>dahsboard</title>
   </head>
   <body>
     <div>welcome <%= message %> to dashboard</div>
     <br />
     <div>
+      <% if (data.alert) {%>
+
+      <div id="alert" class="alert alert-danger" role="alert">
+        <%= data.alert %>
+      </div>
+      <% } %>
+    </div>
+    <div class="container">
+      <button class="btn btn-success">
+        <a href="/users/create"> Create </a>
+      </button>
+      <br />
+      <table class="table table-striped">
+        <tr>
+          <th>#</th>
+          <th>user name</th>
+          <th>user email</th>
+        </tr>
+        <% data.users.forEach((user,index) => {%>
+        <tr>
+          <td><%= index+1 %></td>
+          <td><%= user.name %></td>
+          <td><%= user.email %></td>
+        </tr>
+        <% }); %>
+      </table>
+    </div>
+    <div>
       <form action="/auth/logout" method="get">
         <input type="submit" value="logout here" />
       </form>
     </div>
   </body>
+  <script>
+    const alert = document.getElementById("alert");
+    setTimeout(() => {
+      alert.style.displpay = "none";
+    }, 1000);
+  </script>
 </html>

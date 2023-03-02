@@ -10,6 +10,7 @@
     "express-session": "^1.17.3",
     "pg": "^8.9.0",
     "pg-hstore": "^2.3.4",
+    "req-flash": "^0.0.3",
     "uuid": "^9.0.0"
   },
   "name": "html",

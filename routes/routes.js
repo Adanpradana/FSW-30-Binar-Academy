@@ -4,13 +4,14 @@ const users = require("../controller/users");
 
 router.post("/auth/login", users.login);
 router.get("/auth/logout", users.logOutHandler);
+router.post("/api/users", users.createUsers);
 
+router.get("/users/create", users.renderCreate);
 router.get("/", users.main);
 router.get("/games", users.games);
-router.get("/dashboard", users.dashboard);
 router.get("/login", users.loginPage);
+router.get("/dashboard", users.dashboard);
 router.get("/users", users.findAll);
-router.post("/users", users.createUsers);
 router.put("/users/:_id", users.editUsers);
 router.delete("/users/:_id", users.deleteUsers);
 

@@ -37,8 +37,7 @@ const createUsers = async (req, res) => {
         password,
       },
     });
-    res.status(200).json({ message: "success create users", data: users });
-    res.status();
+    res.redirect("/dashboard");
   } catch (error) {
     res.status(400).json({ message: error });
   }
@@ -47,18 +46,23 @@ const createUsers = async (req, res) => {
 const login = async (req, res) => {
   const { name, password } = req.body;
   try {
-    const user = await prisma.user_game.findMany({
-      where: {
-        name,
-        password,
-      },
-    });
-    if (user) {
+    // const user = await prisma.user_game.findMany({
+    //   where: {
+    //     name,
+    //     password,
+    //   },
+    // });
+    // if (user) {
+
+    if (name === "admin" && password === "test") {
       req.session.loggedin = true;
       req.session.username = name;
-      res.redirect("/games");
+      // req.session.password = password;
+      req.flash("successMessage", "login success !");
+      res.redirect("/dashboard");
     } else {
-      res.redirect("/login", { message: "incorrect uname & password" });
+      req.flash("errorMessage", "wrong username & password!");
+      res.redirect("/login");
     }
   } catch (error) {
     res.status(400).json({ message: error.message });
@@ -99,12 +103,17 @@ const deleteUsers = async (req, res) => {
   }
 };
 
-const dashboard = (req, res) => {
-  if (req.session.loggedin)
+const dashboard = async (req, res) => {
+  const users = await prisma.user_game.findMany();
+  if (req.session.loggedin) {
     res.render("pages/dashboard", {
       message: req.session.username,
+      data: {
+        users,
+        alert: req.flash("successMessage"),
+      },
     });
-  else {
+  } else {
     res.redirect("/login");
   }
 };
@@ -115,7 +124,12 @@ const logOutHandler = (req, res) => {
   req.session.destroy();
   res.redirect("/");
 };
+
+const renderCreate = (req, res) => {
+  if (req.session.loggedin) res.render("pages/create");
+};
 module.exports = {
+  renderCreate,
   logOutHandler,
   main,
   loginPage,

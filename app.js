@@ -6,14 +6,17 @@ const path = require("path");
 const userRoutes = require("./routes/routes");
 const createLog = require("./middleware/logging");
 const session = require("express-session");
+const flash = require("req-flash");
 
 app.use(
   session({
     secret: "secret",
     resave: "true",
     saveUninitialized: true,
+    maxAge: 3600000,
   })
 );
+app.use(flash());
 
 app.use(bodyParser.urlencoded({ extended: false }));
 
