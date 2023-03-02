@@ -43,6 +43,28 @@ const createUsers = async (req, res) => {
     res.status(400).json({ message: error });
   }
 };
+
+const login = async (req, res) => {
+  const { name, password } = req.body;
+  try {
+    const user = await prisma.user_game.findMany({
+      where: {
+        name,
+        password,
+      },
+    });
+    if (user) {
+      req.session.loggedin = true;
+      req.session.username = name;
+      res.redirect("/games");
+    } else {
+      res.redirect("/login", { message: "incorrect uname & password" });
+    }
+  } catch (error) {
+    res.status(400).json({ message: error.message });
+  }
+};
+
 const editUsers = async (req, res) => {
   const { _id } = req.params;
   const { user_name, password } = req.body;
@@ -77,26 +99,6 @@ const deleteUsers = async (req, res) => {
   }
 };
 
-const login = async (req, res) => {
-  const { user_name, password } = req.body;
-  try {
-    const user = await users.findOne({
-      where: {
-        user_name,
-        password,
-      },
-    });
-    if (user) {
-      req.session.loggedin = true;
-      req.session.username = user_name;
-      res.redirect("/games");
-    } else {
-      res.redirect("/login", { message: "incorrect uname & password" });
-    }
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-};
 const dashboard = (req, res) => {
   if (req.session.loggedin)
     res.render("pages/dashboard", {
