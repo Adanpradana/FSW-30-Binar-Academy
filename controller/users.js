@@ -1,4 +1,5 @@
 const { PrismaClient } = require("@prisma/client");
+const { user } = require("pg/lib/defaults");
 const prisma = new PrismaClient();
 
 const main = (req, res) =>
@@ -70,23 +71,21 @@ const login = async (req, res) => {
 };
 
 const editUsers = async (req, res) => {
-  const { _id } = req.params;
-  const { user_name, password } = req.body;
+  const { id, name, email, password } = req.body;
   try {
-    const user = await users.update(
-      {
-        user_name,
+    const user = await prisma.user_game.update({
+      where: {
+        id,
+      },
+      data: {
+        name,
+        email,
         password,
       },
-      {
-        where: {
-          _id,
-        },
-      }
-    );
-    res.status(200).json({ message: "success update users", data: user });
+    });
+    res.redirect("/dashboard");
   } catch (error) {
-    res.status(400).json({ message: error.message });
+    res.redirect(`/users/edit/${user.id}`);
   }
 };
 const deleteUsers = async (req, res) => {
@@ -126,7 +125,10 @@ const logOutHandler = (req, res) => {
 };
 
 const renderEdit = (req, res) => {
-  if (req.session.loggedin) res.render("pages/edit");
+  if (req.session.loggedin) {
+    res.render("pages/edit");
+  }
+  res.redirect("/login");
 };
 module.exports = {
   renderEdit,

@@ -7,6 +7,7 @@ const userRoutes = require("./routes/routes");
 const createLog = require("./middleware/logging");
 const session = require("express-session");
 const flash = require("req-flash");
+app.use(express.static("public"));
 
 app.use(
   session({

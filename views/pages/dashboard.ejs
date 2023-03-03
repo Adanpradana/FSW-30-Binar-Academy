@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../assets/bootstrap/bootstrap.min.css" />
-    <title>dashboard</title>
+    <%- include('../components/head.ejs') %>
   </head>
+  <title>dashboard</title>
   <body>
     <div>
       <% if (data.alert) {%>
@@ -94,10 +91,7 @@
             <td><%= user.email %></td>
             <td>
               <div class="d-flex gap-3">
-                <button
-                  class="btn btn-primary text-white"
-                  action=
-                >
+                <button class="btn btn-primary text-white">
                   <a href="/users/edit/<%= user.id %>"> edit </a>
                 </button>
                 <form action="api/users/remove" method="post">

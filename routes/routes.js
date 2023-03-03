@@ -7,7 +7,7 @@ router.get("/auth/logout", users.logOutHandler);
 router.post("/api/users/create", users.createUsers);
 router.post("/api/users/remove", users.deleteUsers);
 router.get("/api/users", users.findAll);
-router.put("/api/users/:id", users.editUsers);
+router.put("/api/users/", users.editUsers);
 
 router.get("/users/edit/:id", users.renderEdit);
 router.get("/", users.main);
