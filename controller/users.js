@@ -85,7 +85,7 @@ const editUsers = async (req, res) => {
     });
     res.redirect("/dashboard");
   } catch (error) {
-    res.redirect(`/users/edit/${user.id}`);
+    res.status(400).json({ message: error });
   }
 };
 const deleteUsers = async (req, res) => {
@@ -124,11 +124,19 @@ const logOutHandler = (req, res) => {
   res.redirect("/");
 };
 
-const renderEdit = (req, res) => {
-  if (req.session.loggedin) {
-    res.render("pages/edit");
+const renderEdit = async (req, res) => {
+  try {
+    const { id } = req.params;
+    const user = await prisma.user_game.findUnique({
+      where: {
+        id,
+      },
+    });
+
+    res.render("pages/edit", { user });
+  } catch (error) {
+    res.status(400).json({ message: error.message });
   }
-  res.redirect("/login");
 };
 module.exports = {
   renderEdit,

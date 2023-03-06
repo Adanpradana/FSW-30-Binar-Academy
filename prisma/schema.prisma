@@ -11,16 +11,19 @@ datasource db {
 }
 
 model User_game {
-  id       String @id @default(uuid())
-  name     String @unique
-  email    String @unique
-  password String @unique
+  id       String             @id @default(uuid())
+  name     String             @unique
+  email    String             @unique
+  password String             @unique
+  biodata  User_game_biodata?
 }
 
 model User_game_biodata {
-  id      Int    @id @default(autoincrement())
-  address String @unique
-  phone   String @unique
+  id           Int       @id @default(autoincrement())
+  address      String    @unique
+  phone        String    @unique
+  user_game    User_game @relation(fields: [user_game_id], references: [id])
+  user_game_id String    @unique
 }
 
 model User_game_history {

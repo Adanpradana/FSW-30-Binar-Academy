@@ -5,9 +5,14 @@
   </head>
   <title>dashboard</title>
   <body>
-    <div>
+    <div class="w-100 d-flex justify-content-center text-center">
       <% if (data.alert) {%>
-      <div id="alert" class="alert alert-danger" role="alert">
+      <div
+        id="alert"
+        style="width: 300px"
+        class="alert alert-success"
+        role="alert"
+      >
         <%= data.alert %>
       </div>
       <% } %>
@@ -92,7 +97,12 @@
             <td>
               <div class="d-flex gap-3">
                 <button class="btn btn-primary text-white">
-                  <a href="/users/edit/<%= user.id %>"> edit </a>
+                  <a
+                    style="text-decoration: none; color: white"
+                    href="/users/edit/<%= user.id %>"
+                  >
+                    edit
+                  </a>
                 </button>
                 <form action="api/users/remove" method="post">
                   <input type="text" hidden name="id" value="<%= user.id %>" />

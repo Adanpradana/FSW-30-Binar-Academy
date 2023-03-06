@@ -18,10 +18,10 @@
       <div class="container">
         <div class="card card-body container w-50 d-flex">
           <div class="d-flex justify-content-center text fs-1">
-            Welcome to edit
+            Welcome <%= user.name %> ,edit your data !
           </div>
           <br />
-          <form action="/auth/login" method="post">
+          <form action="/api/users/edit" method="post">
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"
                 >Username</label
@@ -32,8 +32,21 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                value="<%=
+              user.name %>"
               />
             </div>
+
+            <input
+              type="text"
+              name="id"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+              value="<%=
+              user.id %>"
+            />
+
             <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label">email</label>
               <input
@@ -42,17 +55,21 @@
                 class="form-control"
                 id="exampleInputEmail1"
                 aria-describedby="emailHelp"
+                value="<%=
+              user.email %>"
               />
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label"
-                >Password</label
+                >Edit your Password</label
               >
               <input
                 type="password"
                 name="password"
                 class="form-control"
                 id="exampleInputPassword1"
+                value="<%=
+              user.password %>"
               />
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
