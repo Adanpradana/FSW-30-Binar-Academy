@@ -1,22 +1,5 @@
 const { PrismaClient } = require("@prisma/client");
-const { user } = require("pg/lib/defaults");
 const prisma = new PrismaClient();
-
-const main = (req, res) =>
-  res.render("pages/index", { title: "What's so special" });
-const games = (req, res) => {
-  try {
-    if (req.session.loggedin)
-      res.render("pages/games", {
-        message: req.session.username,
-      });
-    else {
-      res.redirect("/login");
-    }
-  } catch (error) {
-    res.send({ message: error.message });
-  }
-};
 
 const findAll = async (req, res) => {
   try {
@@ -48,7 +31,7 @@ const createUsers = async (req, res) => {
           create: {
             gender,
             address,
-            phone: BigInt(phone),
+            phone,
           },
         },
       },
@@ -108,54 +91,13 @@ const deleteUsers = async (req, res) => {
   }
 };
 
-const dashboard = async (req, res) => {
-  const users = await prisma.user_game.findMany({
-    include: {
-      biodata: true,
-    },
-  });
-  if (req.session.loggedin) {
-    res.render("pages/dashboard", {
-      message: req.session.username,
-      data: {
-        users,
-        alert: req.flash("successMessage"),
-      },
-    });
-  } else {
-    res.redirect("/login");
-  }
-};
-const loginPage = (req, res) => {
-  res.render("pages/login");
-};
 const logOutHandler = (req, res) => {
   req.session.destroy();
   res.redirect("/");
 };
-
-const renderEdit = async (req, res) => {
-  try {
-    const { id } = req.params;
-    const user = await prisma.user_game.findUnique({
-      where: {
-        id,
-      },
-    });
-
-    res.render("pages/edit", { user });
-  } catch (error) {
-    res.status(400).json({ message: error.message });
-  }
-};
 module.exports = {
-  renderEdit,
   logOutHandler,
-  main,
-  loginPage,
-  dashboard,
   createUsers,
-  games,
   findAll,
   login,
   editUsers,
