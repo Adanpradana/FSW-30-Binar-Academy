@@ -12,7 +12,7 @@ app.use(express.static("public"));
 app.use(
   session({
     secret: "secret",
-    resave: "true",
+    resave: true,
     saveUninitialized: true,
     maxAge: 3600000000,
   })

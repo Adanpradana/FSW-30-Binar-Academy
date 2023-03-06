@@ -22,8 +22,8 @@ model User_game_biodata {
   id           Int       @id @default(autoincrement())
   gender       String
   address      String    @unique
-  phone        Int       @unique
-  user_game    User_game @relation(fields: [user_game_id], references: [id])
+  phone        String    @unique
+  user_game    User_game @relation(fields: [user_game_id], references: [id], onDelete: Cascade, onUpdate: Cascade)
   user_game_id String    @unique
 }
 

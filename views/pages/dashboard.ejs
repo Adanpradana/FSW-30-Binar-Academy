@@ -2,10 +2,15 @@
 <html lang="en">
   <head>
     <%- include('../components/head.ejs') %>
+    <title>dashboard</title>
   </head>
-  <title>dashboard</title>
-  <body>
-    <div class="w-100 d-flex justify-content-center text-center">
+  <body
+    style="height: 100%"
+    class="d-flex align-items-center flex-column bg-danger justify-content-center"
+  >
+    <div
+      class="w-100 d-flex justify-content-center text-center align-items-center"
+    >
       <% if (data.alert) {%>
       <div
         id="alert"
@@ -17,7 +22,10 @@
       </div>
       <% } %>
     </div>
-    <div class="container card card-body">
+    <div
+      class="container d-flex align-items-center card card-body"
+      style="height: 100%"
+    >
       <div
         class="container w-75 d-flex align-items-center justify-content-center flex-column"
       >
@@ -50,6 +58,41 @@
                   />
                 </div>
                 <div class="mb-3">
+                  <select
+                    class="form-select"
+                    aria-label="Default select example"
+                    name="gender"
+                  >
+                    <option selected>Choose Gender</option>
+                    <option value="female">female</option>
+                    <option value="male">male</option>
+                  </select>
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >phone</label
+                  >
+                  <input
+                    type="tel"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    name="phone"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="exampleInputEmail1" class="form-label"
+                    >address</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="exampleInputEmail1"
+                    aria-describedby="emailHelp"
+                    name="address"
+                  />
+                </div>
+                <div class="mb-3">
                   <label for="exampleInputEmail1" class="form-label"
                     >Email address</label
                   >
@@ -75,7 +118,7 @@
                     name="password"
                   />
                 </div>
-                <div class="mb-3 form-check"></div>
+
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
             </div>
@@ -87,6 +130,9 @@
             <th>#</th>
             <th>user name</th>
             <th>user email</th>
+            <th>gender</th>
+            <th>cell phone</th>
+            <th>address</th>
             <th>action</th>
           </tr>
           <% data.users.forEach((user,index) => {%>
@@ -94,6 +140,9 @@
             <td><%= index+1 %></td>
             <td><%= user.name %></td>
             <td><%= user.email %></td>
+            <td><%= user.biodata?.gender %></td>
+            <td><%= user.biodata?.phone %></td>
+            <td><%= user.biodata?.address %></td>
             <td>
               <div class="d-flex gap-3">
                 <button class="btn btn-primary text-white">
@@ -114,12 +163,11 @@
           <% }); %>
         </table>
       </div>
-    </div>
-    <div>
       <form action="/auth/logout" method="get">
-        <input type="submit" value="logout here" />
+        <input type="submit" class="btn btn-danger" value="logout here" />
       </form>
     </div>
+    <div></div>
   </body>
   <script src="../assets/bootstrap/bootstrap.bundle.min.js"></script>
 </html>

@@ -20,7 +20,11 @@ const games = (req, res) => {
 
 const findAll = async (req, res) => {
   try {
-    const result = await prisma.user_game.findMany();
+    const result = await prisma.user_game.findMany({
+      include: {
+        biodata: true,
+      },
+    });
     result.length > 0
       ? res.status(200).json({ message: "success get all data", data: result })
       : res.status(200).json({ message: "users is empty!" });
@@ -29,36 +33,38 @@ const findAll = async (req, res) => {
   }
 };
 const createUsers = async (req, res) => {
-  const { name, email, password } = req.body;
+  const { name, email, password, gender, address, phone } = req.body;
+
   try {
+    if (!req.body) {
+      res.json({ message: "cannot be emtpy" });
+    }
     const users = await prisma.user_game.create({
       data: {
         name,
         email,
         password,
+        biodata: {
+          create: {
+            gender,
+            address,
+            phone: BigInt(phone),
+          },
+        },
       },
     });
-    users ? res.redirect("/dashboard") : console.log("cant be empty");
+    res.redirect("/dashboard");
   } catch (error) {
-    res.status(400).json({ message: error });
+    res.status(400).json({ message: error.message });
   }
 };
 
 const login = async (req, res) => {
   const { name, password } = req.body;
   try {
-    // const user = await prisma.user_game.findMany({
-    //   where: {
-    //     name,
-    //     password,
-    //   },
-    // });
-    // if (user) {
-
     if (name === "admin" && password === "test") {
       req.session.loggedin = true;
       req.session.username = name;
-      // req.session.password = password;
       req.flash("successMessage", "login success !");
       res.redirect("/dashboard");
     } else {
@@ -103,7 +109,11 @@ const deleteUsers = async (req, res) => {
 };
 
 const dashboard = async (req, res) => {
-  const users = await prisma.user_game.findMany();
+  const users = await prisma.user_game.findMany({
+    include: {
+      biodata: true,
+    },
+  });
   if (req.session.loggedin) {
     res.render("pages/dashboard", {
       message: req.session.username,
