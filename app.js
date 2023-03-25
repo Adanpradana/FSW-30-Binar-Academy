@@ -1,13 +1,11 @@
-const port = 8000;
-const express = require("express");
-const app = express();
-const bodyParser = require("body-parser");
-const path = require("path");
-const userRoutes = require("./routes/routes");
+const userRoutes = require("./src/routes/routes");
 const createLog = require("./middleware/logging");
 const session = require("express-session");
+const express = require("express");
 const flash = require("req-flash");
-app.use(express.static("public"));
+const path = require("path");
+const app = express();
+const port = 8000;
 
 app.use(
   session({
@@ -19,13 +17,12 @@ app.use(
 );
 app.use(flash());
 
-app.use(bodyParser.urlencoded({ extended: false }));
-
-app.use(express.static(path.join(__dirname, "/views")));
+app.use(express.static(path.join(__dirname, "public")));
+app.use(express.urlencoded({ extended: true }));
+app.set("views", "./src/views");
 app.set("view engine", "ejs");
-app.set("views", "views");
-app.use(bodyParser.json());
-app.use(createLog);
+app.use(express.json());
 app.use(userRoutes);
+app.use(createLog);
 
 app.listen(port, () => console.log(`running in port ${port}`));

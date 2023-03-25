@@ -1,5 +1,6 @@
 const { PrismaClient } = require("@prisma/client");
 const prisma = new PrismaClient();
+const bcrypt = require("bcrypt");
 
 const findAll = async (req, res) => {
   try {
@@ -17,7 +18,7 @@ const findAll = async (req, res) => {
 };
 const createUsers = async (req, res) => {
   const { name, email, password, gender, address, phone } = req.body;
-
+  const hashedPassword = await bcrypt.hash(password, 12);
   try {
     if (!req.body) {
       res.json({ message: "cannot be emtpy" });
@@ -26,7 +27,7 @@ const createUsers = async (req, res) => {
       data: {
         name,
         email,
-        password,
+        password: hashedPassword,
         biodata: {
           create: {
             gender,
@@ -36,7 +37,7 @@ const createUsers = async (req, res) => {
         },
       },
     });
-    res.redirect("/dashboard");
+    res.redirect("/login");
   } catch (error) {
     res.status(400).json({ message: error.message });
   }
@@ -45,14 +46,14 @@ const createUsers = async (req, res) => {
 const login = async (req, res) => {
   const { name, password } = req.body;
   try {
-    if (name === "admin" && password === "test") {
-      req.session.loggedin = true;
-      req.session.username = name;
-      req.flash("successMessage", "login success !");
-      res.redirect("/dashboard");
-    } else {
-      req.flash("errorMessage", "wrong username & password!");
-      res.redirect("/login");
+    const login = await prisma.user_game.findUnique({
+      where: {
+        name,
+      },
+    });
+    const compare = await bcrypt.compare(password, login.password);
+    if (compare) {
+      res.status(200).json({ message: "login success" });
     }
   } catch (error) {
     res.status(400).json({ message: error.message });
